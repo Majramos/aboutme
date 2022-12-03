@@ -15,7 +15,7 @@ pages:
   script:
     - npm run build
     - mv build/* public
-    - npm tailwindcss -o .public/styles.css --minify
+    # - npm tailwindcss -o .public/styles.css --minify
   after_script:
     - rm -rf build
   artifacts:
