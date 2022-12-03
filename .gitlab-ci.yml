@@ -10,8 +10,9 @@ cache:
 pages:
   before_script:
     # Clean public folder
-    - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
-    - find public -type f -name "*.html" | xargs rm -rf
+    # - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
+    # - find public -type f -name "*.html" | xargs rm -rf
+    - echo "before script"
   script:
     - npm run build
     - mv build/* public
