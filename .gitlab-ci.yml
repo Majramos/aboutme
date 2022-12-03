@@ -5,7 +5,7 @@ before_script:
   - npm install
 pages:
   script:
-    - npm build
+    - npm run build
     - mv build/* public
     - rm -rf build
   artifacts:
