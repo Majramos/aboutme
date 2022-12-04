@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
 
+
 export default function Home() {
     return (
         <Layout title="Marco Ramos">
