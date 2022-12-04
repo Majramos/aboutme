@@ -1,8 +1,5 @@
 image: node:19
 
-#before_script:
-  #- npm install
-
 cache:
   paths:
     - node_modules/
@@ -16,7 +13,6 @@ pages:
   script:
     - npm run build
     - mv build/* public
-    # - npm tailwindcss -o .public/styles.css --minify
   after_script:
     - rm -rf build
   artifacts:

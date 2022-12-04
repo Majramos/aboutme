@@ -41,3 +41,6 @@ jspm_packages
 
 # Optional id of container use for development
 env/containerid
+
+# Local builds
+build
