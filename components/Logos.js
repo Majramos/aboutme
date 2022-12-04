@@ -48,10 +48,11 @@ export function Twitter() {
 export default function HomeLogos() {
     return (
         <div className="flex justify-center space-x-12 fill-zinc-700">
-            <Linkedin />
-            <Github />
-            <Gitlab />
-            <Twitter />
+            <a href="https://linkedin.com/in/majramos"><Linkedin /></a>
+            <a href="https://gitlab.com/majramos"><Gitlab /></a>
+            <a href="https://github.com/Majramos"><Github /></a>
+            <a href="https://twitter.com/majramos"><Twitter /></a>
         </div>
     )
 }
+
