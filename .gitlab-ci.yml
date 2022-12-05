@@ -12,7 +12,7 @@ pages:
     - npm install
   script:
     - npm run build
-    - mv build/* public
+    - mv build/* public/
   after_script:
     - rm -rf build
   artifacts:
