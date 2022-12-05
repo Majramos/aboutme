@@ -15,6 +15,10 @@ build:
     - npm install
   script:
     - npm run build
+  artifacts:
+    paths:
+      - build
+    expire_in: 1 day
 
 pages:
   stage: deploy
