@@ -1,17 +1,29 @@
 image: node:19
 
+stages:
+  - build
+  - deploy
+
 cache:
   paths:
     - node_modules/
 
-pages:
+
+build:
+  stage: build
   before_script:
-    # Clean public folder
-    - find public -mindepth 1 -maxdepth 1 -type d -not \( -path "public/icons" -o -path "public/images" \) | xargs rm -rf
-    - find public -type f -name "*.html" | xargs rm -rf
     - npm install
   script:
     - npm run build
+
+pages:
+  before_script:
+    # Clean public folder
+    - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
+    - find public -type f -name "*.html" | xargs rm -rf
+    # - npm install
+  script:
+    # - npm run build
     - mv build/* public/
   after_script:
     - rm -rf build
