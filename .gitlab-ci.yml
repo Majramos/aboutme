@@ -17,6 +17,7 @@ build:
     - npm run build
 
 pages:
+  stage: deploy
   before_script:
     # Clean public folder
     - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
