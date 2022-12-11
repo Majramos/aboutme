@@ -46,7 +46,7 @@ export function Twitter() {
 
 export default function HomeLogos() {
     return (
-        <div className="flex justify-center space-x-20 py-6">
+        <div className="flex justify-center space-x-10 md:space-x-20 py-6">
             <a href="https://linkedin.com/in/majramos"><Linkedin /></a>
             <a href="https://gitlab.com/majramos"><Gitlab /></a>
             <a href="https://github.com/Majramos"><Github /></a>
