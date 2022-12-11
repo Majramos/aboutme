@@ -4,10 +4,13 @@ stages:
   - build
   - deploy
 
+.default_rules:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
+
 cache:
   paths:
     - node_modules/
-
 
 build:
   stage: build
@@ -19,6 +22,8 @@ build:
     paths:
       - build
     expire_in: 1 day
+  rules:
+    - !reference [.default_rules, rules]
 
 pages:
   stage: deploy
@@ -26,9 +31,7 @@ pages:
     # Clean public folder
     - find public -mindepth 1 -maxdepth 1 -type d | xargs rm -rf
     - find public -type f -name "*.html" | xargs rm -rf
-    # - npm install
   script:
-    # - npm run build
     - mv build/* public/
   after_script:
     - rm -rf build
@@ -36,5 +39,4 @@ pages:
     paths:
       - public
   rules:
-    #- if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"'
+    - !reference [.default_rules, rules]
