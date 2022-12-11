@@ -1,8 +1,7 @@
 
 function LogoLayout({ viewb = 512, children }) {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox={`0 0 ${viewb} 512`} 
-className="cursor-pointer rounded h-6 w-6 transition duration-250 hover:scale-125">      
+        <svg xmlns="ihttp://www.w3.org/2000/svg" viewBox={`0 0 ${viewb} 512`} className="cursor-pointer h-6 w-6 transition duration-[250ms] hover:scale-[1.5]">
             {children}
         </svg>
     )
@@ -47,7 +46,7 @@ export function Twitter() {
 
 export default function HomeLogos() {
     return (
-        <div className="flex justify-center space-x-12 fill-zinc-700">
+        <div className="flex justify-center space-x-20 py-6">
             <a href="https://linkedin.com/in/majramos"><Linkedin /></a>
             <a href="https://gitlab.com/majramos"><Gitlab /></a>
             <a href="https://github.com/Majramos"><Github /></a>

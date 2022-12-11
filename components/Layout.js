@@ -1,13 +1,6 @@
-import { useEffect } from 'react';
 import Head from 'next/head';
 
-
 export default function Layout({ title, children }) {
-
-    useEffect(() => {
-        document.body.classList.add('bg-zinc-100');
-    });
-
     return (
         <>
             <Head>
