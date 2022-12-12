@@ -48,6 +48,7 @@ html {
 .body-light button:hover {
     background-color: var(--dark);
     fill: var(--light);
+    color: var(--light);
 }
 
 .body-light ::selection {
@@ -68,6 +69,7 @@ html {
 
 .body-dark button:hover {
     background-color: var(--light);
+    color: var(--dark);
     fill: var(--dark);
 }
 
@@ -76,3 +78,18 @@ html {
     color: var(--dark);
 }
 
+.show-on-hover {
+    font-style: italic;
+    display: none;
+}
+
+.hoverable {
+    position: relative;
+}
+
+.hoverable:hover .show-on-hover {
+    display: block;
+    position: absolute;
+    top: 4rem;
+    width: 20rem;
+}

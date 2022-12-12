@@ -5,7 +5,7 @@ import Script from 'next/script'
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-        <Script src="/scripts/darkmode.js" strategy="afterInteractive" />
+        <Script id="darkmode-script" src="/scripts/darkmode.js" strategy="beforeInteractive" />
         <Component {...pageProps} />
     </>
     )
