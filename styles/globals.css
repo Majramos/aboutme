@@ -78,18 +78,14 @@ html {
     color: var(--dark);
 }
 
-.show-on-hover {
-    font-style: italic;
+#linkshower {
     display: none;
-}
-
-.hoverable {
-    position: relative;
-}
-
-.hoverable:hover .show-on-hover {
-    display: block;
     position: absolute;
-    top: 4rem;
-    width: 20rem;
+    margin-top: 6rem;
 }
+
+#linkshower > p {
+     font-style: italic;
+     font-size: 0.85rem;
+}
+

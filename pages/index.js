@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
 import { ButtonBase } from '../components/Buttons';
@@ -11,11 +12,30 @@ function Name({ children }) {
     )
 }
 
+
 export default function Home() {
+    useEffect(() => {
+    
+        var linkshower = document.getElementById("linkshower");
+
+        const sites = {
+            'linkedin.com/in/majramos': document.getElementById('linkedinlink'),
+            'gitlab.com/majramos': document.getElementById('gitlablink'),
+            'github.com/Majramos': document.getElementById('githublink'),
+            'twitter.com/majramos': document.getElementById('twitterlink')
+        }
+
+        for (const [key, value] of Object.entries(sites)) {
+            value.addEventListener('mouseover', (e) => { showlink(key); });
+            value.addEventListener('mouseout', (e) => { linkshower.style.display = "none"; });
+        }
+
+    }, []);    
+
     return (
         <Layout title="Marco Ramos">
             <div className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
-                <div className="flex justify-center"> 
+               <div className="flex justify-center"> 
                     <div className="flex mx-3">
                         <Name>M</Name>
                         <Name>a</Name>
@@ -35,8 +55,6 @@ export default function Home() {
                     Geologist / Data Scientist
                 </p>
                 <HomeLogos />
-                <div className="flex justify-center py-6">
-                </div>
             </div>
         </Layout>
     )

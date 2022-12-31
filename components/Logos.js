@@ -42,14 +42,14 @@ export function Twitter() {
 
 export default function HomeLogos() {
     return (
-        <div className="flex justify-center space-x-10 md:space-x-20 py-6">
-            <a className="hoverable" href="https://linkedin.com/in/majramos">
-                <Linkedin />
-                <p className="show-on-hover left-[10px]">https://linkedin.com/in/majramos</p>
-            </a>
-            <a href="https://gitlab.com/majramos"><Gitlab /></a>
-            <a href="https://github.com/Majramos"><Github /></a>
-            <a href="https://twitter.com/majramos"><Twitter /></a>
+        <div className="flex justify-center">
+            <div className="flex justify-center space-x-10 md:space-x-20 py-6">
+                <a id="linkedinlink" href="https://linkedin.com/in/majramos"><Linkedin /></a>
+                <a id="gitlablink" href="https://gitlab.com/majramos"><Gitlab /></a>
+                <a id="githublink" href="https://github.com/Majramos"><Github /></a>
+                <a id="twitterlink" href="https://twitter.com/majramos"><Twitter /></a>
+            </div>
+            <div id="linkshower" className="flex justify-center"><p></p></div>
         </div>
     )
 }
