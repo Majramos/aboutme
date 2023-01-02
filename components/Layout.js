@@ -1,6 +1,14 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { ThemeSwitch } from '../components/Buttons';
 
 export default function Layout({ title, children }) {
+    useEffect(() => {
+        themeChecker();
+        document.getElementById('theme-toggle').addEventListener('click', changeTheme);
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeTheme);
+    }, []);
+
     return (
         <>
             <Head>
@@ -14,6 +22,9 @@ export default function Layout({ title, children }) {
             <main className="container mx-auto max-w-7xl min-h-screen">
                 {children}
             </main>
+            <div className="absolute top-0 left-0 m-2">
+                <ThemeSwitch />
+            </div>
         </>
     );
 }
