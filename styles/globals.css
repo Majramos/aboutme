@@ -85,7 +85,17 @@ html {
 }
 
 #linkshower > p {
-     font-style: italic;
-     font-size: 0.85rem;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* properties for text in theme toggler */
+#theme-toggle:hover > p {
+    display: inherit;
+    font-size: 0.7rem;
+}
+
+#theme-toggle-light-icon, #theme-toggle-dark-icon {
+    display: none;
 }
 
