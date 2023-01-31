@@ -32,6 +32,12 @@
 html {
     font-family: 'mononoki', 'sans-serif';
     font-weight: normal;
+    scroll-behavior: smooth !important; 
+}
+
+body {
+    transition: color 300ms, background-color 300ms;
+    scroll-behavior: smooth;
 }
 
 .body-light {
@@ -81,7 +87,7 @@ html {
 #linkshower {
     display: none;
     position: absolute;
-    margin-top: 6rem;
+    margin-top: 5rem;
 }
 
 #linkshower > p {

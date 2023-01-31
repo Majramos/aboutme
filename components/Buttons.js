@@ -1,3 +1,5 @@
+import Link from 'next/link';   
+
 
 export function ButtonBase({ id, extra="px-4 py-2", children }) {
     return (
@@ -26,9 +28,19 @@ export function ThemeSwitch() {
 
 export function GoHome() {
     return (
-        <ButtonBase id="go-home">
-            Go Back Home
-        </ButtonBase>
+        <Link href="/">
+            <ButtonBase id="go-home" extra="w-32 h-10 text-xs sm:text-sm">Go Back Home</ButtonBase>
+        </Link>
+    )
+}
+
+export function ButtonPair({ id, href, children }) {
+    return (
+        <Link href={ href }>
+            <ButtonBase id={ id } extra="w-28 h-10 text-xs sm:text-sm">
+                { children }
+            </ButtonBase>
+        </Link>
     )
 }
 

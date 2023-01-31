@@ -22,7 +22,7 @@ export default function Layout({ title, children }) {
             <main className="container mx-auto max-w-7xl min-h-screen">
                 {children}
             </main>
-            <div className="absolute bottom-4 right-4 m-2">
+            <div className="fixed bottom-4 right-4 m-2">
                 <ThemeSwitch />
             </div>
         </>

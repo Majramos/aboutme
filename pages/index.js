@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
-import { ButtonBase } from '../components/Buttons';
+import { ButtonPair } from '../components/Buttons';
 
 
 function Name({ children }) {
@@ -34,7 +34,7 @@ export default function Home() {
 
     return (
         <Layout title="Marco Ramos">
-            <div className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
+            <section className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
                <div className="flex justify-center"> 
                     <div className="flex mx-3">
                         <Name>M</Name>
@@ -55,7 +55,16 @@ export default function Home() {
                     Geologist / Data Scientist
                 </p>
                 <HomeLogos />
-            </div>
+                <div className="mt-14 space-x-6">
+                    <ButtonPair id="resume-button" href="#target-cv">CV</ButtonPair>
+                    <ButtonPair id="projects-button" href='#'>Projects</ButtonPair>
+                </div>
+            </section>
+            <section id="target-cv" className="m-20">
+                <p className="text-center p-6 rounded-2xl backdrop-opacity-25 hover:backdrop-opacity-75 backdrop-blur-sm shadow-lg hover:shadow-xl transition duration-300">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec orci eget diam consectetur blandit id id neque. Nam tincidunt purus lectus, at sodales quam volutpat in. Quisque egestas ullamcorper lobortis. Quisque tempus sit amet ante et scelerisque. Sed tellus tortor, faucibus nec pulvinar ac, lobortis sed neque. Ut vel libero vestibulum dolor aliquam pulvinar eu vitae felis. Cras elementum nunc eget molestie interdum. Aliquam ullamcorper consectetur justo eget sodales. Donec interdum tempor justo eu dapibus.
+                </p>
+            </section>
         </Layout>
     )
 }
