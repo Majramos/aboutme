@@ -1,0 +1,41 @@
+{
+    "name": "Marco Ramos",
+    "ocupation": "Data Scientist / Geologist",
+    "socials": [
+        {
+            "name": "Linkedin",
+            "link": "https://linkedin.com/in/majramos"
+        }, 
+        {
+            "name": "GitLab",
+            "link": "https://gitlab.com/majramos"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/Majramos"
+        },
+        {
+            "name": "Twitter",
+            "link": "https://twitter.com/majramos"
+        }
+    ],
+    "introduction": "A resourceful professional with a natural attitude to developing solutions to complex problems by selecting, interpreting, adapting and applying the available information through the application of technical knowledge.\n\nI have a Bsc in Geology and a Msc in Geosciences in the area of expertise geologic resources by the University of Coimbra. In addition I have a Msc in Petroleum Engineering by Heriot-Watt university.\n\nCurrently working as a data scientist and digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making process.",
+    "timeline": [
+        {
+            "type": "work",
+            "title": "Data Scientist / Digital Transformation Specialist",
+            "where": "Comercial BU @ Galp",
+            "start": "15/07/2020",
+            "end": null,
+            "description": "Help formulate a digital vision for Galp, working with interdepartmental teams and all relevant stakeholders to drive the implementation of digital capacity within the organization applying BI tools and techniques and data analysis to provide practical ideas and recommendations for the business. Work with internal clients to understand the requirements of the business and lead the development of routine and ad hoc reports and panels, according to those requirements. Develop, test and validate hypotheses through the application of a range of advanced mathematical, statistical, scientific and/or computational techniques."
+        },
+        {
+            "type": "work",
+            "title": "Reservoir Geologist",
+            "where": "Upstream BU @ Galp",
+            "start": "15/04/2017",
+            "end": "15/07/2020",
+            "description": "Organize and maintain corporate geological and GIS databases, ensuring the integrity and quality. Elaborate decision support packages and value of information exercises to help through decision gates for different projects. Build and implement optimized modelling, uncertainty and sensitivity workflows by developing purpose made routines in various software packages. Plan and execute reservoir studies incorporating different types of data, performing seismic interpretation and build complex structural and petrophysical models.\n\nProvide support for Mozambique Rovuma LNG project, by assisting and executing multi-disciplinary field development studies and work as a geoscience focal point for Angola block 14 development projects, following-up on drilling, completion and workovers operations in infill campaigns."
+        }
+    ]
+}
