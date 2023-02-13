@@ -63,7 +63,7 @@ export default function Home( props ) {
                 </div>
             </section>
             <section id="target-cv" className="m-10">
-                <div className="p-6 rounded-2xl backdrop-opacity-25 hover:backdrop-opacity-75 backdrop-blur-sm shadow-lg hover:shadow-xl transition duration-300">
+                <div className="p-6 rounded-2xl backdrop-opacity-25 hover:backdrop-opacity-75 focus:backdrop-opacity-75 backdrop-blur-sm shadow-lg hover:shadow-xl focus:shadow-xl transition duration-300">
                     <p className="select-none whitespace-pre-wrap text-justify">
                         { props.introduction }
                     </p>
