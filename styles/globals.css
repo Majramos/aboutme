@@ -18,26 +18,25 @@
 }
 
 @font-face {
-    font-family: 'mononoki-italic'; 
-    src: url('/fonts/mononoki-Italic-Nerd-Font-Complete-Mono.ttf') format('truetype'); 
-    font-weight: 400; 
+    font-family: 'mononoki-italic';
+    src: url('/fonts/mononoki-Italic-Nerd-Font-Complete-Mono.ttf') format('truetype');
+    font-weight: 400;
     font-style: italic;
 }
 
 :root {
-    --light: #f4f4f5; /* zinc-100 */
-    --dark: #3f3f46; /* zinc-700 */
+    --light: #f4f4f5;/* zinc-100 */
+    --dark: #3f3f46;/* zinc-700 */
 }
 
 html {
     font-family: 'mononoki', 'sans-serif';
     font-weight: normal;
-    scroll-behavior: smooth !important; 
+    scroll-behavior: smooth !important;
 }
 
 body {
     transition: color 300ms, background-color 300ms;
-    scroll-behavior: smooth;
 }
 
 .body-light {
@@ -105,3 +104,33 @@ body {
     display: none;
 }
 
+.tab-panel {
+    display:none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+#resume:checked ~ .tabs-panels #resume-panel,
+#project:checked ~ .tabs-panels #project-panel {
+    display: inline-block
+}
+
+.body-light #resume:checked ~ .tabs #resume-tab,
+.body-light #project:checked ~ .tabs #project-tab {
+    border-bottom: 2px solid var(--dark);
+    backdrop-filter: blur(4px) opacity(0.75);
+}
+
+.body-dark #resume:checked ~ .tabs #resume-tab,
+.body-dark #project:checked ~ .tabs #project-tab {
+    border-bottom: 2px solid var(--light);
+    backdrop-filter: blur(4px) opacity(0.75);
+}
