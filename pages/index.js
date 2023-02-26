@@ -92,7 +92,7 @@ export default function Home( props ) {
                 </div>
             </section>
             <section id="tab-section" className="m-10 mb-20">
-                <TabWrapper />
+                <TabWrapper cvdata={ cvdata } />
             </section>
         </Layout>
     )

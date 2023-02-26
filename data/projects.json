@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "name": "pydremio",
+            "description": "Dremio client application in Python that use Arrow Flight",
+            "state": "production",
+            "url": "https://gitlab.com/majramos/pydremio"
+        },
+        {
+            "name": "jupyterlab theme solarized dark",
+            "description": "Custom jupyterlab Solarized Dark theme extension",
+            "state": "production",
+            "url": "https://gitlab.com/majramos/jupyterlab-theme-solarized-dark"
+        },
+        {
+            "name": "holidays Portugal",
+            "description": "Package to dynamically calculate the holidays dates from Portugal, both national and regional holidays for each district and county",
+            "state": "production",
+            "url": "https://gitlab.com/majramos/holidays-pt"
+        }
+    ]
+}
