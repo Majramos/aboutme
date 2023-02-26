@@ -8,13 +8,18 @@ import path from 'path';
 
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), 'data/cv.json');
-    const jsonData = await fsPromises.readFile(filePath);
-    const cvdata = JSON.parse(jsonData);
+    const cvfilePath = path.join(process.cwd(), 'data/cv.json');
+    const filePathprojects = path.join(process.cwd(), 'data/projects.json');
+
+    const jsonDatacvdata = await fsPromises.readFile(cvfilePath);
+    const jsonDataprojects = await fsPromises.readFile(filePathprojects);
+
+    const cvdata = JSON.parse(jsonDatacvdata);
+    const projects = JSON.parse(jsonDataprojects);
 
     return {
         props: {
-            cvdata
+            cvdata, projects
         }
     }
 }
@@ -52,6 +57,7 @@ export default function Home( props ) {
 
 
         const sites = {
+            'majramos@gmail.com': document.getElementById('emaillink'),
             'linkedin.com/in/majramos': document.getElementById('linkedinlink'),
             'gitlab.com/majramos': document.getElementById('gitlablink'),
             'github.com/Majramos': document.getElementById('githublink'),
@@ -92,7 +98,7 @@ export default function Home( props ) {
                 </div>
             </section>
             <section id="tab-section" className="m-10 mb-20">
-                <TabWrapper cvdata={ cvdata } />
+                <TabWrapper props={ props }/>
             </section>
         </Layout>
     )
