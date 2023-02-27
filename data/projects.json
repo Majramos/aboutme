@@ -1,22 +1,36 @@
 {
     "projects": [
         {
+            "id": "proj1",
             "name": "pydremio",
             "description": "Dremio client application in Python that use Arrow Flight",
             "state": "production",
+            "tags": ["python", "dremio", "arrow"],
             "url": "https://gitlab.com/majramos/pydremio"
         },
         {
+            "id": "proj2",
             "name": "jupyterlab theme solarized dark",
             "description": "Custom jupyterlab Solarized Dark theme extension",
             "state": "production",
+            "tags": ["python", "jupyter", "theme"],
             "url": "https://gitlab.com/majramos/jupyterlab-theme-solarized-dark"
         },
         {
+            "id": "proj3",
             "name": "holidays Portugal",
             "description": "Package to dynamically calculate the holidays dates from Portugal, both national and regional holidays for each district and county",
             "state": "production",
+            "tags": ["python", "holidays"],
             "url": "https://gitlab.com/majramos/holidays-pt"
+        },
+        {
+            "id": "proj4",
+            "name": " py-jupyter-devenv",
+            "description": "Creates a fully contained python development environment with jupyterlab using containers",
+            "state": "development",
+            "tags": ["python", "jupyterlab", "environment", "container"],
+            "url": "https://gitlab.com/majramos/py-jupyter-devenv"
         }
     ]
 }

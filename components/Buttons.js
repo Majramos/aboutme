@@ -1,4 +1,4 @@
-import Link from 'next/link';   
+import Link from 'next/link';
 
 
 export function ButtonBase({ id, extra="px-4 py-2", children }) {

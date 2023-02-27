@@ -24,6 +24,7 @@ export async function getStaticProps() {
     }
 }
 
+
 function Name({ children }) {
     const classes = 'text-5xl sm:text-8xl font-bold transition duration-300 ease-in-out hover:scale-x-[-1]'
     return (
@@ -97,7 +98,7 @@ export default function Home( props ) {
                     </p>
                 </div>
             </section>
-            <section id="tab-section" className="m-10 mb-20">
+            <section id="tab-section" className="m-10 mb-15">
                 <TabWrapper props={ props }/>
             </section>
         </Layout>

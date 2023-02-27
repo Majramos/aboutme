@@ -134,3 +134,21 @@ body {
     border-bottom: 2px solid var(--light);
     backdrop-filter: blur(4px) opacity(0.75);
 }
+
+.body-light .project-card {
+    border-color: var(--dark);
+}
+
+.body-dark .project-card {
+    border-color: var(--light);
+}
+
+.body-light .project-tag {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.body-dark .project-tag {
+    background-color: var(--light);
+    color: var(--dark);
+}

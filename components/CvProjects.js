@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { ButtonBase } from '../components/Buttons';
 
 
 function _work() {
@@ -9,6 +11,7 @@ function _work() {
     )
 }
 
+
 function _school() {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fillRule="currentColor" className="w-3 h-3">
@@ -17,58 +20,131 @@ function _school() {
     )
 }
 
+
+function _development() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6">
+            <path fillRule="evenodd" d="M14.5 10a4.5 4.5 0 004.284-5.882c-.105-.324-.51-.391-.752-.15L15.34 6.66a.454.454 0 01-.493.11 3.01 3.01 0 01-1.618-1.616.455.455 0 01.11-.494l2.694-2.692c.24-.241.174-.647-.15-.752a4.5 4.5 0 00-5.873 4.575c.055.873-.128 1.808-.8 2.368l-7.23 6.024a2.724 2.724 0 103.837 3.837l6.024-7.23c.56-.672 1.495-.855 2.368-.8.096.007.193.01.291.01zM5 16a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
+            <path d="M14.5 11.5c.173 0 .345-.007.514-.022l3.754 3.754a2.5 2.5 0 01-3.536 3.536l-4.41-4.41 2.172-2.607c.052-.063.147-.138.342-.196.202-.06.469-.087.777-.067.128.008.257.012.387.012zM6 4.586l2.33 2.33a.452.452 0 01-.08.09L6.8 8.214 4.586 6H3.309a.5.5 0 01-.447-.276l-1.7-3.402a.5.5 0 01.093-.577l.49-.49a.5.5 0 01.577-.094l3.402 1.7A.5.5 0 016 3.31v1.277z" />
+        </svg>
+    )
+}
+
+
+function _production() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-6 h-6">
+            <path fillRule="evenodd" d="M4.606 12.97a.75.75 0 01-.134 1.051 2.494 2.494 0 00-.93 2.437 2.494 2.494 0 002.437-.93.75.75 0 111.186.918 3.995 3.995 0 01-4.482 1.332.75.75 0 01-.461-.461 3.994 3.994 0 011.332-4.482.75.75 0 011.052.134z" clipRule="evenodd" />
+            <path fillRule="evenodd" d="M5.752 12A13.07 13.07 0 008 14.248v4.002c0 .414.336.75.75.75a5 5 0 004.797-6.414 12.984 12.984 0 005.45-10.848.75.75 0 00-.735-.735 12.984 12.984 0 00-10.849 5.45A5 5 0 001 11.25c.001.414.337.75.751.75h4.002zM13 9a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+        </svg>
+    )
+}
+
+
+function _buildCvSection( job ) {
+    return (
+        <li key={job.id}>
+            <div className="flex-start flex items-center pt-3">
+                <div className="-ml-[10px] flex mr-1 h-[20px] w-[20px] \
+                                rounded-full border-zinc-500 \
+                                dark:bg-zinc-500 items-center \
+                                justify-center">
+                    { job.type === 'work' ? <_work /> : <_school /> }
+                </div>
+                <p className="text-sm italic">
+                    { job.start } - { job.end  || 'currently' }
+                </p>
+            </div>
+            <div className="mt-2 ml-4 mb-6">
+                <h4 className="mb-1.5 text-xl font-semibold">
+                    { job.title }
+                </h4>
+                <p className="mb-3 text-sm text-right">
+                    { job.where }
+                </p>
+                <p className="mb-3 text-sm whitespace-pre-wrap \
+                              text-justify max-h-full">
+                    { job.description }
+                </p>
+            </div>
+        </li>
+    )
+}
+
+
 function CvSection( cvdata ) {
 
     const timeline = cvdata.cvdata.timeline;
 
     return (
         <ol className="border-l border-zinc-500 select-none">
-
-            {
-                timeline.map((job) => {
-                    return (
-                        <li key={job.id}>
-                            <div className="flex-start flex items-center pt-3">
-                                <div className="-ml-[10px] flex mr-1 h-[20px] w-[20px] \
-                                                rounded-full border-zinc-500 \
-                                                dark:bg-zinc-500 items-center justify-center">
-                                    { job.type === 'work' ? <_work /> : <_school /> }
-                                </div>
-                                <p className="text-sm italic">
-                                    { job.start } - { job.end  || 'currently' }
-                                </p>
-                            </div>
-                            <div className="mt-2 ml-4 mb-6">
-                                <h4 className="mb-1.5 text-xl font-semibold">
-                                    { job.title }
-                                </h4>
-                                <p className="mb-3 text-sm text-right">
-                                    { job.where }
-                                </p>
-                                <p className="mb-3 text-sm whitespace-pre-wrap text-justify max-h-full">
-                                    { job.description }
-                                </p>
-                            </div>
-                        </li>
-                    )
-                })
-            }
+            { timeline.map(_buildCvSection) }
         </ol>
     )
 }
 
 
-function ProjectsSection() {
+function _buildProjTags( tag, index ) {
     return (
-        <div>
-            <h1>Projects Section</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictum justo eget purus vestibulum, sed vulputate risus dapibus. Praesent a sodales lorem. Donec ante lorem, condimentum sit amet metus quis, tincidunt dignissim nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum quis nulla at tortor blandit iaculis non dapibus sem. Donec id viverra dolor. Donec ultrices turpis at ipsum dapibus ullamcorper. Fusce commodo sem vitae pharetra fermentum. Morbi placerat interdum tincidunt. In at ligula vitae neque malesuada scelerisque. Nulla facilisi. Morbi maximus in mi ut ornare. Fusce eu viverra elit. Donec laoreet at leo non sollicitudin. Duis malesuada tortor a sem pellentesque finibus. </p>
+        <span
+            key={tag+index}
+            className="project-tag inline-block rounded-full px-2 py-1 \
+                       text-xs font-semibold mx-1 my-2">
+            #{ tag }
+        </span>
+    )
+}
+
+
+function _buildProjSection( proj ) {
+    return (
+        <div key={ proj.id }
+            className="project-card flex flex-col justify-between rounded-xl p-4 \
+                       shadow-lg border hover:border-2 border-dashed m-2 \
+                       transition duration-[250ms] hover:scale-[1.05]">
+
+            <div>
+                <h5 className="mb-2 text-xl font-medium leading-tight">
+                    { proj.name }
+                </h5>
+                <p className="text-sm mb-3">
+                    { proj.description }
+                </p>
+            </div>
+            <div>
+                <div className="flex flex-wrap pt-2 pb-2">
+                    { proj.tags.map((tag, index) => _buildProjTags(tag, index)) }
+                </div>
+                <div className="flex items-center justify-between mx-5">
+                    { proj.state === 'production' ? <_production /> : <_development /> }
+                    <Link href={ proj.url } legacyBehavior>
+                        <a target="_blank" rel="noopener noreferrer">
+                            <ButtonBase extra="text-sm px-3 py-1">
+                                Visit
+                            </ButtonBase>
+                        </a>
+                    </Link>
+                </div>
+            </div>
         </div>
     )
 }
 
 
-export default function TabWrapper( { cvdata }) {
+function ProjectsSection( _projects ) {
+
+    const projects = _projects.projects.projects;
+
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 \
+                        gap-2 justify-evenly select-none">
+            { projects.map( _buildProjSection ) }
+        </div>
+    )
+}
+
+
+export default function TabWrapper( { props }) {
 
     const tabs_class = "inline-block text-center select-none \
                         cursor-pointer grow py-2.5 mx-3 border-b-2 \
@@ -93,12 +169,16 @@ export default function TabWrapper( { cvdata }) {
             </div>
 
             <div className="tabs-panels text-sm sm:text-base my-4 p-6 \
-                            rounded-2xl backdrop-blur-sm backdrop-opacity-75">
-                <div className="tab-panel overflow-y-auto max-h-[30rem] px-3" id="resume-panel">
-                    <CvSection cvdata={ cvdata } />
+                            rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
+                <div
+                    className="tab-panel overflow-y-auto max-h-[30rem] px-3"
+                    id="resume-panel">
+                    <CvSection cvdata={ props.cvdata } />
                 </div>
-                <div className="tab-panel max-h-[30rem] " id="project-panel">
-                    <ProjectsSection />
+                <div
+                    className="tab-panel overflow-y-auto max-h-[30rem] px-3"
+                    id="project-panel">
+                    <ProjectsSection projects={ props.projects } />
                 </div>
             </div>
         </div>

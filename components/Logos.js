@@ -53,10 +53,10 @@ export default function HomeLogos() {
         <div className="flex justify-center">
             <div className="flex justify-center space-x-10 sm:space-x-20 py-6">
                 <a id="emaillink" href="#"><Email /></a>
-                <a id="linkedinlink" href="https://linkedin.com/in/majramos"><Linkedin /></a>
-                <a id="gitlablink" href="https://gitlab.com/majramos"><Gitlab /></a>
-                <a id="githublink" href="https://github.com/Majramos"><Github /></a>
-                <a id="twitterlink" href="https://twitter.com/majramos"><Twitter /></a>
+                <a id="linkedinlink" href="https://linkedin.com/in/majramos" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+                <a id="gitlablink" href="https://gitlab.com/majramos" target="_blank" rel="noopener noreferrer"><Gitlab /></a>
+                <a id="githublink" href="https://github.com/Majramos" target="_blank" rel="noopener noreferrer"><Github /></a>
+                <a id="twitterlink" href="https://twitter.com/majramos" target="_blank" rel="noopener noreferrer"><Twitter /></a>
             </div>
             <div id="linkshower" className="flex justify-center"><p></p></div>
         </div>
