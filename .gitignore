@@ -44,3 +44,6 @@ env/containerid
 
 # Local builds
 build
+
+# Geany editor project
+*.geany

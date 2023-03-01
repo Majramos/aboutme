@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
 import { GoHome } from '../components/Buttons';
 
@@ -11,9 +10,7 @@ export default function Custom404() {
                     404 - Page Not Found
                 </h1>
                 <div className="flex justify-center space-x-2 py-6">
-                    <Link href="/">
-                        <GoHome />
-                    </Link>
+                    <GoHome />
                 </div>
             </div>
         </Layout>

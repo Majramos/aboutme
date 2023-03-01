@@ -19,10 +19,10 @@ export default function Layout({ title, children }) {
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
             </Head>
-            <main className="container mx-auto max-w-7xl min-h-screen">
+            <main className="container mx-auto min-h-screen">
                 {children}
             </main>
-            <div className="absolute top-0 left-0 m-2">
+            <div className="fixed bottom-4 right-4 m-2">
                 <ThemeSwitch />
             </div>
         </>

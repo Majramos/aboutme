@@ -1,0 +1,72 @@
+{
+    "first_name": "Marco",
+    "last_name": "Ramos",
+    "full_name": "Marco Ramos",
+    "ocupation": "Data Scientist / Geologist",
+    "socials": [
+        {
+            "name": "Linkedin",
+            "link": "https://linkedin.com/in/majramos"
+        },
+        {
+            "name": "GitLab",
+            "link": "https://gitlab.com/majramos"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/Majramos"
+        },
+        {
+            "name": "Twitter",
+            "link": "https://twitter.com/majramos"
+        }
+    ],
+    "introduction": "A resourceful professional with a natural attitude to developing solutions to complex problems by selecting, interpreting, adapting and applying the available information through the application of technical knowledge.\n\nCurrently working as a data scientist and digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making process.",
+    "timeline": [
+        {
+            "id": "work2",
+            "type": "work",
+            "title": "Data Scientist / Digital Transformation Specialist",
+            "where": "Comercial Business Unit @ Galp",
+            "start": "07/2020",
+            "end": null,
+            "description": "Help formulate a digital vision for Galp, working with interdepartmental teams and all relevant stakeholders to drive the implementation of digital capacity within the organization applying BI tools and techniques and data analysis to provide practical ideas and recommendations for the business.\nWork with internal clients to understand the requirements of the business and lead the development of routine and ad hoc reports and panels, according to those requirements. Develop, test and validate hypotheses through the application of a range of advanced mathematical, statistical, scientific and/or computational techniques."
+        },
+        {
+            "id": "work1",
+            "type": "work",
+            "title": "Reservoir Geologist",
+            "where": "Upstream Business Unit @ Galp",
+            "start": "04/2017",
+            "end": "07/2020",
+            "description": "Organize and maintain corporate geological and GIS databases, ensuring the integrity and quality. Elaborate decision support packages and value of information exercises to help through decision gates for different projects. Build and implement optimized modelling, uncertainty and sensitivity workflows by developing purpose made routines in various software packages. Plan and execute reservoir studies incorporating different types of data, performing seismic interpretation and build complex structural and petrophysical models.\nProvide support for Mozambique Rovuma LNG project, by assisting and executing multi-disciplinary field development studies and work as a geoscience focal point for Angola block 14 development projects, following-up on drilling, completion and workovers operations in infill campaigns."
+        },
+        {
+            "id": "school3",
+            "type": "school",
+            "title": "Master of Science",
+            "where": "Heriot-Watt University",
+            "start": "03/2017",
+            "end": "03/2016",
+            "description": "Master's degree in Petroleum Engineering sponsored by galp"
+        },
+        {
+            "id": "school2",
+            "type": "school",
+            "title": "Master of Science",
+            "where": "University of Coimbra",
+            "start": "06/2015",
+            "end": "09/2013",
+            "description": "Master's degree in Geoscience specializing in the area of expertise of geological resources.\nDissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)"
+        },
+        {
+            "id": "school1",
+            "type": "school",
+            "title": "Bachelor of Science",
+            "where": "University of Coimbra",
+            "start": "06/2013",
+            "end": "09/2010",
+            "description": "Bachelor's degree in Geology"
+        }
+    ]
+}
