@@ -56,7 +56,7 @@ body {
     color: var(--light);
 }
 
-.body-light ::selection, .body-light .project-tag  {
+.body-light ::selection, .body-light .project-tag, .body-light .tooltiptext {
     background-color: var(--dark);
     color: var(--light);
 }
@@ -82,7 +82,7 @@ body {
     fill: var(--dark);
 }
 
-.body-dark ::selection, .body-dark .project-tag {
+.body-dark ::selection, .body-dark .project-tag, .body-dark .tooltiptext {
     background-color: var(--light);
     color: var(--dark);
 }
@@ -141,4 +141,30 @@ body {
 .body-dark #project:checked ~ .tabs #project-tab {
     border-bottom: 2px solid var(--light);
     backdrop-filter: blur(4px) opacity(0.75);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 7rem;
+    height: 2rem;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 1rem;
+    font-size: 0.70rem;
+    position: absolute;
+    z-index: 1;
+    left: 3rem;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.cv-icon {
+    border-color: rgb(113 113 122);
+    background-color: rgb(113 113 122);
+}
+
+.cv-icon svg {
+    fill: var(--light);
 }
