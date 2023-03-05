@@ -39,6 +39,18 @@ body {
     transition: color 300ms, background-color 300ms;
 }
 
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+}
+
 .body-light {
     background-color: var(--light);
     color: var(--dark);
