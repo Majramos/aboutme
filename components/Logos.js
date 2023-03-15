@@ -52,7 +52,7 @@ export default function HomeLogos() {
     return (
         <div className="flex justify-center">
             <div className="flex justify-center space-x-10 sm:space-x-20 py-6">
-                <a id="emaillink" href="#"><Email /></a>
+                <a id="emaillink" href="mailto:majramos@gmail.com"><Email /></a>
                 <a id="linkedinlink" href="https://linkedin.com/in/majramos" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
                 <a id="gitlablink" href="https://gitlab.com/majramos" target="_blank" rel="noopener noreferrer"><Gitlab /></a>
                 <a id="githublink" href="https://github.com/Majramos" target="_blank" rel="noopener noreferrer"><Github /></a>
