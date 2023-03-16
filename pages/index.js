@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
-import { ButtonPair } from '../components/Buttons';
-import TabWrapper from '../components/CvProjects';
+import { TabButtons } from '../components/Buttons';
+import TabWrapper from '../components/TabsSections';
 import fsPromises from 'fs/promises';
 import path from 'path';
 
@@ -55,6 +55,10 @@ export default function Home( props ) {
             document.getElementById("resume").click();
         });
 
+        document.getElementById("skills-button").addEventListener('click', (e) => {
+            document.getElementById("skills").click();
+        });
+
 
 
         const sites = {
@@ -83,9 +87,10 @@ export default function Home( props ) {
                     { cvdata.ocupation }
                 </p>
                 <HomeLogos />
-                <div className="mt-14 space-x-6">
-                    <ButtonPair id="resume-button" href="#resume-tab">CV</ButtonPair>
-                    <ButtonPair id="projects-button" href="#project-tab" >Projects</ButtonPair>
+                <div className="mt-14 space-x-3 sm:space-x-6">
+                    <TabButtons id="resume-button" href="#resume-tab">CV</TabButtons>
+                    <TabButtons id="skills-button" href="#skills-tab">Skills</TabButtons>
+                    <TabButtons id="projects-button" href="#project-tab" >Projects</TabButtons>
                 </div>
             </section>
             <section id="target-cv" className="m-10">
@@ -104,4 +109,3 @@ export default function Home( props ) {
         </Layout>
     )
 }
-
