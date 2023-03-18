@@ -148,14 +148,12 @@ body {
 .body-light #skills:checked ~ .tabs #skills-tab,
 .body-light #project:checked ~ .tabs #project-tab {
     border-bottom: 2px solid var(--dark);
-    backdrop-filter: blur(4px) opacity(0.75);
 }
 
 .body-dark #resume:checked ~ .tabs #resume-tab,
 .body-dark #skills:checked ~ .tabs #skills-tab,
 .body-dark #project:checked ~ .tabs #project-tab {
     border-bottom: 2px solid var(--light);
-    backdrop-filter: blur(4px) opacity(0.75);
 }
 
 .tooltip .tooltiptext {

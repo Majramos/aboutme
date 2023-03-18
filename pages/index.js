@@ -41,11 +41,7 @@ export default function Home( props ) {
 
     useEffect(() => {
 
-        var linkshower = document.getElementById("linkshower");
-
-
         document.getElementById("resume").click();
-
 
         document.getElementById("projects-button").addEventListener('click', (e) => {
             document.getElementById("project").click();
@@ -58,21 +54,6 @@ export default function Home( props ) {
         document.getElementById("skills-button").addEventListener('click', (e) => {
             document.getElementById("skills").click();
         });
-
-
-
-        const sites = {
-            'majramos@gmail.com': document.getElementById('emaillink'),
-            'linkedin.com/in/majramos': document.getElementById('linkedinlink'),
-            'gitlab.com/majramos': document.getElementById('gitlablink'),
-            'github.com/Majramos': document.getElementById('githublink'),
-            'twitter.com/majramos': document.getElementById('twitterlink')
-        }
-
-        for (const [key, value] of Object.entries(sites)) {
-            value.addEventListener('mouseover', (e) => { showlink(key); });
-            value.addEventListener('mouseout', (e) => { linkshower.style.display = "none"; });
-        }
 
     }, []);
 

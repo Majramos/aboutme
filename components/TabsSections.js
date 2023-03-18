@@ -195,7 +195,7 @@ export default function TabWrapper( { props }) {
             <input className="hidden" id="project" name="group"
                 type="radio" onChange={()=>{}} />
 
-            <div className="tabs flex justify-around shadow-lg rounded-2xl">
+            <div className="tabs flex justify-around shadow-lg rounded-2xl backdrop-opacity-75 backdrop-blur-sm">
                 <label className={ tabs_class } id="resume-tab" htmlFor="resume">
                     Resume
                 </label>
@@ -207,7 +207,7 @@ export default function TabWrapper( { props }) {
                 </label>
             </div>
 
-            <div className="tabs-panels text-sm sm:text-base my-4 p-6 \
+            <div className="tabs-panels text-sm sm:text-base my-1 p-6 \
                             rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
                 <div
                     className="tab-panel overflow-y-auto max-h-[30rem] px-3"
