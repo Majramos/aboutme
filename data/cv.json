@@ -3,6 +3,10 @@
     "last_name": "Ramos",
     "full_name": "Marco Ramos",
     "ocupation": "Data Scientist / Geologist",
+    "email": {
+        "primary": "marco@marcoramos.me",
+        "secondary": "majramos@gmail.com"
+    },
     "socials": [
         {
             "name": "Linkedin",
@@ -75,7 +79,7 @@
         {"id": 3, "name": "business intelligence", "level": 4},
         {"id": 4, "name": "css", "level": 1},
         {"id": 5, "name": "data science", "level": 4},
-        {"id": 6, "name": "data engineer", "level": 3},
+        {"id": 6, "name": "data engineering", "level": 3},
         {"id": 7, "name": "docker", "level": 2},
         {"id": 8, "name": "gis", "level": 3},
         {"id": 9, "name": "git", "level": 4},
