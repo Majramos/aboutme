@@ -37,6 +37,7 @@ html {
 
 body {
     transition: color 300ms, background-color 300ms;
+    background-attachment: fixed;
 }
 
 ::-webkit-scrollbar {
