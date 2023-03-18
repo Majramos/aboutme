@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
-import { ButtonPair } from '../components/Buttons';
-import TabWrapper from '../components/CvProjects';
+import { TabButtons } from '../components/Buttons';
+import TabWrapper from '../components/TabsSections';
 import fsPromises from 'fs/promises';
 import path from 'path';
 
@@ -41,11 +41,7 @@ export default function Home( props ) {
 
     useEffect(() => {
 
-        var linkshower = document.getElementById("linkshower");
-
-
         document.getElementById("resume").click();
-
 
         document.getElementById("projects-button").addEventListener('click', (e) => {
             document.getElementById("project").click();
@@ -55,20 +51,9 @@ export default function Home( props ) {
             document.getElementById("resume").click();
         });
 
-
-
-        const sites = {
-            'majramos@gmail.com': document.getElementById('emaillink'),
-            'linkedin.com/in/majramos': document.getElementById('linkedinlink'),
-            'gitlab.com/majramos': document.getElementById('gitlablink'),
-            'github.com/Majramos': document.getElementById('githublink'),
-            'twitter.com/majramos': document.getElementById('twitterlink')
-        }
-
-        for (const [key, value] of Object.entries(sites)) {
-            value.addEventListener('mouseover', (e) => { showlink(key); });
-            value.addEventListener('mouseout', (e) => { linkshower.style.display = "none"; });
-        }
+        document.getElementById("skills-button").addEventListener('click', (e) => {
+            document.getElementById("skills").click();
+        });
 
     }, []);
 
@@ -83,9 +68,10 @@ export default function Home( props ) {
                     { cvdata.ocupation }
                 </p>
                 <HomeLogos />
-                <div className="mt-14 space-x-6">
-                    <ButtonPair id="resume-button" href="#resume-tab">CV</ButtonPair>
-                    <ButtonPair id="projects-button" href="#project-tab" >Projects</ButtonPair>
+                <div className="mt-14 space-x-3 sm:space-x-6">
+                    <TabButtons id="resume-button" href="#resume-tab">CV</TabButtons>
+                    <TabButtons id="skills-button" href="#skills-tab">Skills</TabButtons>
+                    <TabButtons id="projects-button" href="#project-tab" >Projects</TabButtons>
                 </div>
             </section>
             <section id="target-cv" className="m-10">
@@ -104,4 +90,3 @@ export default function Home( props ) {
         </Layout>
     )
 }
-

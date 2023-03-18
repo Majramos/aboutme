@@ -3,6 +3,10 @@
     "last_name": "Ramos",
     "full_name": "Marco Ramos",
     "ocupation": "Data Scientist / Geologist",
+    "email": {
+        "primary": "marco@marcoramos.me",
+        "secondary": "majramos@gmail.com"
+    },
     "socials": [
         {
             "name": "Linkedin",
@@ -68,5 +72,27 @@
             "end": "09/2010",
             "description": "Bachelor's degree in Geology"
         }
+    ],
+    "skills" : [
+        {"id": 1, "name": "ArcGIS", "level": 3},
+        {"id": 2, "name": "bash", "level": 1},
+        {"id": 3, "name": "business intelligence", "level": 4},
+        {"id": 4, "name": "css", "level": 1},
+        {"id": 5, "name": "data science", "level": 4},
+        {"id": 6, "name": "data engineering", "level": 3},
+        {"id": 7, "name": "docker", "level": 2},
+        {"id": 8, "name": "gis", "level": 3},
+        {"id": 9, "name": "git", "level": 4},
+        {"id": 10, "name": "gitlab", "level": 3},
+        {"id": 11, "name": "html", "level": 2},
+        {"id": 12, "name": "javascript", "level": 1},
+        {"id": 13, "name": "next.js", "level": 1},
+        {"id": 14, "name": "pandas", "level": 5},
+        {"id": 15, "name": "python", "level": 5},
+        {"id": 16, "name": "R", "level": 2},
+        {"id": 17, "name": "sklearn", "level": 4},
+        {"id": 18, "name": "spark", "level": 3},
+        {"id": 19, "name": "SQL", "level": 4},
+        {"id": 20, "name": "tailwindcss", "level": 2}
     ]
 }
