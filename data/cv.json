@@ -1,9 +1,9 @@
 {
-    "last_update": "2023-03-21",
+    "last_update": "2023-03-27",
     "first_name": "Marco",
     "last_name": "Ramos",
     "full_name": "Marco Ramos",
-    "ocupation": "Data Scientist / Geologist",
+    "ocupation": "Data / Geo Scientist",
     "email": {
         "primary": "marco@marcoramos.me",
         "secondary": "majramos@gmail.com"
@@ -26,7 +26,7 @@
             "link": "https://twitter.com/majramos"
         }
     ],
-    "introduction": "A resourceful professional with a natural attitude to developing solutions to complex problems by selecting, interpreting, adapting and applying the available information through the application of technical knowledge.\n\nCurrently working as a data scientist and digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making process.",
+    "introduction": "A resourceful professional with a natural attitude to developing solutions for complex problems by selecting, interpreting, adapting and applying the available information through the application of technical knowledge.\n\nCurrently working as a data scientist and digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making process.",
     "timeline": [
         {
             "id": "work2",
@@ -48,29 +48,29 @@
         },
         {
             "id": "school3",
-            "type": "school",
+            "type": "education",
             "title": "Master of Science",
             "where": "Heriot-Watt University",
-            "start": "03/2017",
-            "end": "03/2016",
+            "start": "03/2016",
+            "end": "03/2017",
             "description": "Master's degree in Petroleum Engineering sponsored by galp"
         },
         {
             "id": "school2",
-            "type": "school",
+            "type": "education",
             "title": "Master of Science",
             "where": "University of Coimbra",
-            "start": "06/2015",
-            "end": "09/2013",
+            "start": "09/2013",
+            "end": "06/2015",
             "description": "Master's degree in Geoscience specializing in the area of expertise of geological resources.\nDissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)"
         },
         {
             "id": "school1",
-            "type": "school",
+            "type": "education",
             "title": "Bachelor of Science",
             "where": "University of Coimbra",
-            "start": "06/2013",
-            "end": "09/2010",
+            "start": "09/2010",
+            "end": "06/2013",
             "description": "Bachelor's degree in Geology"
         }
     ],
@@ -87,13 +87,15 @@
         {"id": 10, "name": "gitlab", "level": 3},
         {"id": 11, "name": "html", "level": 2},
         {"id": 12, "name": "javascript", "level": 1},
-        {"id": 13, "name": "next.js", "level": 1},
-        {"id": 14, "name": "pandas", "level": 5},
-        {"id": 15, "name": "python", "level": 5},
-        {"id": 16, "name": "R", "level": 2},
-        {"id": 17, "name": "sklearn", "level": 4},
-        {"id": 18, "name": "spark", "level": 3},
-        {"id": 19, "name": "SQL", "level": 4},
-        {"id": 20, "name": "tailwindcss", "level": 2}
+        {"id": 13, "name": "machine learning", "level": 3},
+        {"id": 14, "name": "next.js", "level": 1},
+        {"id": 15, "name": "pandas", "level": 5},
+        {"id": 16, "name": "powershell", "level": 2},
+        {"id": 17, "name": "python", "level": 5},
+        {"id": 18, "name": "R", "level": 2},
+        {"id": 19, "name": "sklearn", "level": 4},
+        {"id": 20, "name": "spark", "level": 3},
+        {"id": 21, "name": "SQL", "level": 4},
+        {"id": 22, "name": "tailwindcss", "level": 1}
     ]
 }
