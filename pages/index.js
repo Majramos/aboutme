@@ -55,9 +55,12 @@ export default function Home( props ) {
             </section>
             <section id="target-cv" className="m-10">
                 <div className="p-6 text-sm sm:text-base rounded-2xl backdrop-opacity-75 backdrop-blur-sm shadow-lg hover:shadow-xl focus:shadow-xl transition duration-300">
-                    <p className="select-none whitespace-pre-wrap text-justify">
-                        { cvdata.introduction }
-                    </p>
+                    { cvdata.introduction.map( (text, index) => (
+                        <p key={index} className="select-none whitespace-pre-wrap text-justify py-3">
+                            { text }
+                        </p>
+                        )
+                    )}
                     <p className="text-right pt-2">
                         { cvdata.full_name }
                     </p>

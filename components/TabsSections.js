@@ -65,13 +65,17 @@ function _buildCvSection( job ) {
                 <h4 className="mb-1.5 text-lg sm:text-xl font-semibold">
                     { job.title }
                 </h4>
-                <p className="mb-3 text-xs sm:text-sm text-right">
+                <p className="my-2 text-xs sm:text-sm text-right">
                     { job.where }
                 </p>
-                <p className="mb-3 text-xs sm:text-sm whitespace-pre-wrap \
-                              text-justify max-h-full">
-                    { job.description }
-                </p>
+                <ul className="my-2 ml-3 text-xs sm:text-sm whitespace-pre-wrap text-justify max-h-full list-disc">
+                    { job.description.map( (text, index) => (
+                        <li key={index} className="my-2">
+                            { text }
+                        </li>
+                        )
+                    )}
+                </ul>
             </div>
         </li>
     )
@@ -212,9 +216,8 @@ export function TabWrapper( { props }) {
 
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
         return (
-            <div
-                className="tab-panel overflow-y-auto max-h-[30rem] px-3"
-                key={ tab } id={ tab+"-panel" }>
+            <div key={ tab } id={ tab+"-panel" }
+                className="tab-panel overflow-y-auto max-h-[30rem] px-3">
                 <Section props={ props } tab={ tab } />
             </div>
         )
@@ -246,8 +249,7 @@ export function TabWrapper( { props }) {
                 )) }
             </div>
 
-            <div className="tabs-panels text-sm sm:text-base my-1 p-6 \
-                            rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
+            <div className="tabs-panels text-sm sm:text-base my-1 p-6 rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
                 { tabs_sections }
             </div>
         </div>
