@@ -139,21 +139,24 @@ body {
     }
 }
 
-#resume:checked ~ .tabs-panels #resume-panel,
+#work:checked ~ .tabs-panels #work-panel,
+#education:checked ~ .tabs-panels #education-panel,
 #skills:checked ~ .tabs-panels #skills-panel,
-#project:checked ~ .tabs-panels #project-panel  {
+#projects:checked ~ .tabs-panels #projects-panel  {
     display: inline-block
 }
 
-.body-light #resume:checked ~ .tabs #resume-tab,
+.body-light #work:checked ~ .tabs #work-tab,
+.body-light #education:checked ~ .tabs #education-tab,
 .body-light #skills:checked ~ .tabs #skills-tab,
-.body-light #project:checked ~ .tabs #project-tab {
+.body-light #projects:checked ~ .tabs #projects-tab {
     border-bottom: 2px solid var(--dark);
 }
 
-.body-dark #resume:checked ~ .tabs #resume-tab,
+.body-dark #work:checked ~ .tabs #work-tab,
+.body-dark #education:checked ~ .tabs #education-tab,
 .body-dark #skills:checked ~ .tabs #skills-tab,
-.body-dark #project:checked ~ .tabs #project-tab {
+.body-dark #projects:checked ~ .tabs #projects-tab {
     border-bottom: 2px solid var(--light);
 }
 

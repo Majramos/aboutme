@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
+import fsPromises from 'fs/promises';
+import path from 'path';
+
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
 import { TabButtons } from '../components/Buttons';
-import TabWrapper from '../components/TabsSections';
-import fsPromises from 'fs/promises';
-import path from 'path';
+import { TabWrapper, TabButtonWrapper } from '../components/TabsSections';
 
 
 export async function getStaticProps() {
@@ -39,24 +40,6 @@ export default function Home( props ) {
 
     const cvdata = props.cvdata
 
-    useEffect(() => {
-
-        document.getElementById("resume").click();
-
-        document.getElementById("projects-button").addEventListener('click', (e) => {
-            document.getElementById("project").click();
-        });
-
-        document.getElementById("resume-button").addEventListener('click', (e) => {
-            document.getElementById("resume").click();
-        });
-
-        document.getElementById("skills-button").addEventListener('click', (e) => {
-            document.getElementById("skills").click();
-        });
-
-    }, []);
-
     return (
         <Layout title="Marco Ramos">
             <section className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
@@ -68,11 +51,7 @@ export default function Home( props ) {
                     { cvdata.ocupation }
                 </p>
                 <HomeLogos />
-                <div className="mt-14 space-x-3 sm:space-x-6">
-                    <TabButtons id="resume-button" href="#resume-tab">CV</TabButtons>
-                    <TabButtons id="skills-button" href="#skills-tab">Skills</TabButtons>
-                    <TabButtons id="projects-button" href="#project-tab" >Projects</TabButtons>
-                </div>
+                <TabButtonWrapper />
             </section>
             <section id="target-cv" className="m-10">
                 <div className="p-6 text-sm sm:text-base rounded-2xl backdrop-opacity-75 backdrop-blur-sm shadow-lg hover:shadow-xl focus:shadow-xl transition duration-300">
