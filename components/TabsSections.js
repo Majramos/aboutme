@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ButtonBase } from '../components/Buttons';
+import { useEffect } from 'react';
+import { ButtonBase, TabButtons } from '../components/Buttons';
 
 
 function _work() {
@@ -64,22 +65,26 @@ function _buildCvSection( job ) {
                 <h4 className="mb-1.5 text-lg sm:text-xl font-semibold">
                     { job.title }
                 </h4>
-                <p className="mb-3 text-xs sm:text-sm text-right">
+                <p className="my-2 text-xs sm:text-sm text-right">
                     { job.where }
                 </p>
-                <p className="mb-3 text-xs sm:text-sm whitespace-pre-wrap \
-                              text-justify max-h-full">
-                    { job.description }
-                </p>
+                <ul className="my-2 ml-3 text-xs sm:text-sm whitespace-pre-wrap text-justify max-h-full list-disc">
+                    { job.description.map( (text, index) => (
+                        <li key={index} className="my-2">
+                            { text }
+                        </li>
+                        )
+                    )}
+                </ul>
             </div>
         </li>
     )
 }
 
 
-function CvSection( cvdata ) {
+function CvSection( { props, tab } ) {
 
-    const timeline = cvdata.cvdata.timeline;
+    const timeline = props.cvdata.timeline.filter(item => item.type === tab );
 
     return (
         <ol className="border-l border-zinc-500 select-none">
@@ -135,9 +140,9 @@ function _buildProjSection( proj ) {
 }
 
 
-function ProjectsSection( _projects ) {
+function ProjectsSection( { props, tab } ) {
 
-    const projects = _projects.projects.projects;
+    const projects = props.projects.projects;
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 \
@@ -148,9 +153,9 @@ function ProjectsSection( _projects ) {
 }
 
 
-function SkillsSection( cvdata ) {
+function SkillsSection( { props, tab } ) {
 
-    const skills = cvdata.cvdata.skills;
+    const skills = props.cvdata.skills;
 
     const levelsbase = "project-tag inline-block rounded-full \
                         font-semibold m-2 transition duration-[250ms] \
@@ -178,7 +183,30 @@ function SkillsSection( cvdata ) {
 }
 
 
-export default function TabWrapper( { props }) {
+const tabsButton = {
+    "work": CvSection,
+    "education": CvSection,
+    "skills": SkillsSection,
+    "projects": ProjectsSection
+};
+
+
+export function TabButtonWrapper() {
+    return (
+        <div className="mt-14 space-x-3 sm:space-x-6">
+            { Object.keys(tabsButton).map(
+                tab => (
+                    <TabButtons key={ tab } id={ tab+"-button" }  href={ "#"+tab+"-tab" }>
+                        { tab.charAt(0).toUpperCase() + tab.slice(1) }
+                    </TabButtons>
+                ))
+            }
+        </div>
+    )
+}
+
+
+export function TabWrapper( { props }) {
 
     const tabs_class = "inline-block text-center text-sm sm:text-base select-none \
                         cursor-pointer grow py-2.5 mx-3 border-b-2 \
@@ -186,44 +214,43 @@ export default function TabWrapper( { props }) {
                         transition duration-300 backdrop-blur-sm \
                         backdrop-opacity-25"
 
+    const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
+        return (
+            <div key={ tab } id={ tab+"-panel" }
+                className="tab-panel overflow-y-auto max-h-[30rem] px-3">
+                <Section props={ props } tab={ tab } />
+            </div>
+        )
+    });
+
+    useEffect(() => {
+
+        document.getElementById("work").click();
+
+        Object.keys(tabsButton).forEach(tab => {
+            document.getElementById(tab+"-button").addEventListener('click', (e) => {
+                document.getElementById(tab).click();
+            });
+        });
+
+    }, []);
+
     return (
         <div className="flex flex-col">
-            <input className="hidden" id="resume" name="group"
-                type="radio" onChange={()=>{}} />
-            <input className="hidden" id="skills" name="group"
-                type="radio" onChange={()=>{}} />
-            <input className="hidden" id="project" name="group"
-                type="radio" onChange={()=>{}} />
+            { Object.keys(tabsButton).map( tab => (
+                    <input className="hidden" key={ tab } id={ tab } name="group" type="radio" onChange={()=>{}} />
+            )) }
 
             <div className="tabs flex justify-around shadow-lg rounded-2xl backdrop-opacity-75 backdrop-blur-sm">
-                <label className={ tabs_class } id="resume-tab" htmlFor="resume">
-                    Resume
-                </label>
-                <label className={ tabs_class } id="skills-tab" htmlFor="skills">
-                    Skills
-                </label>
-                <label className={ tabs_class } id="project-tab" htmlFor="project">
-                    Projects
-                </label>
+                { Object.keys(tabsButton).map( tab => (
+                    <label className={ tabs_class } key={ tab }  id={ tab+"-tab" } htmlFor={ tab }>
+                        { tab.charAt(0).toUpperCase() + tab.slice(1) }
+                    </label>
+                )) }
             </div>
 
-            <div className="tabs-panels text-sm sm:text-base my-1 p-6 \
-                            rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
-                <div
-                    className="tab-panel overflow-y-auto max-h-[30rem] px-3"
-                    id="resume-panel">
-                    <CvSection cvdata={ props.cvdata } />
-                </div>
-                <div
-                    className="tab-panel overflow-y-auto max-h-[30rem] px-3"
-                    id="skills-panel">
-                    <SkillsSection cvdata={ props.cvdata } />
-                </div>
-                <div
-                    className="tab-panel overflow-y-auto max-h-[30rem] px-3"
-                    id="project-panel">
-                    <ProjectsSection projects={ props.projects } />
-                </div>
+            <div className="tabs-panels text-sm sm:text-base my-1 p-6 rounded-2xl backdrop-blur-sm backdrop-opacity-75 shadow-lg">
+                { tabs_sections }
             </div>
         </div>
     )
