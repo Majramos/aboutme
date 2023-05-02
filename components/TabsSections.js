@@ -217,7 +217,7 @@ export function TabWrapper( { props }) {
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
         return (
             <div key={ tab } id={ tab+"-panel" }
-                className="tab-panel overflow-y-auto max-h-[30rem] px-3">
+                className="tab-panel overflow-y-auto max-h-[30rem] w-full px-3">
                 <Section props={ props } tab={ tab } />
             </div>
         )

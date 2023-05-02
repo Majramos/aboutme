@@ -61,18 +61,18 @@
         {
             "id": "school3",
             "type": "education",
-            "title": "Master of Science",
+            "title": "Master of Science - Petroleum Engineering",
             "where": "Heriot-Watt University",
             "start": "03/2016",
             "end": "03/2017",
             "description": [
-                "Master's degree in Petroleum Engineering sponsored by galp"
+                "Master's degree in Petroleum Engineering sponsored by GALP"
             ]
         },
         {
             "id": "school2",
             "type": "education",
-            "title": "Master of Science",
+            "title": "Master of Science - Geoscience",
             "where": "University of Coimbra",
             "start": "09/2013",
             "end": "06/2015",
@@ -84,7 +84,7 @@
         {
             "id": "school1",
             "type": "education",
-            "title": "Bachelor of Science",
+            "title": "Bachelor of Science - Geology",
             "where": "University of Coimbra",
             "start": "09/2010",
             "end": "06/2013",
