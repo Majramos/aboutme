@@ -27,8 +27,8 @@
         }
     ],
     "introduction": [
-        "A resourceful professional with a natural attitude to developing solutions for complex problems by selecting, interpreting, adapting and applying the available information through the application of technical knowledge",
-        "Currently working as a data scientist and digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making process."
+        "I'm resourceful professional with a natural attitude to developing solutions for complex problems trough selection, interpretation and manipulation of the available data bringing high-quality business intelligence solutions to businesses seeking higher efficiency",
+        "Currently working as a data scientist / digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making processes"
     ],
     "timeline": [
         {
@@ -39,9 +39,12 @@
             "start": "07/2020",
             "end": null,
             "description": [
-                "Help formulate a digital vision for Galp, working with interdepartmental teams and all relevant stakeholders to drive the implementation of digital capacity within the organization applying BI tools and techniques and data analysis to provide practical ideas and recommendations for the business.",
-                "Work with internal clients to understand the requirements of the business and lead the development of routine and ad hoc reports and panels, according to those requirements.",
-                "Develop, test and validate hypotheses through the application of a range of advanced mathematical, statistical, scientific and/or computational techniques."
+                "Help formulate a digital vision by working with interdepartmental teams and all relevant stakeholders to drive the implementation of digital capacity within the organization.",
+                "Work with internal clients to understand the requirements of the business and lead the development of statistical reports and visualizations in Power BI, defining data rules for and KPIs for performance metrics.",
+                "Apply BI tools and data analysis techniques to develop, test and validate hypotheses to provide practical ideas and recommendations for the business.",
+                "Perform data mining using basket analysis to provide a better understanding of the retail customers purchasing patterns.",
+                "Provide customer segmentation models based on their activity to select the best next action",
+                "Build and mantained basic ETL pipelines for ingesting data from diverse data sources, including web scraping, ensuring data quality. using Python, Spark and S3"
             ]
         },
         {
@@ -61,18 +64,18 @@
         {
             "id": "school3",
             "type": "education",
-            "title": "Master of Science",
+            "title": "Master of Science - Petroleum Engineering",
             "where": "Heriot-Watt University",
             "start": "03/2016",
             "end": "03/2017",
             "description": [
-                "Master's degree in Petroleum Engineering sponsored by galp"
+                "Master's degree in Petroleum Engineering sponsored by GALP"
             ]
         },
         {
             "id": "school2",
             "type": "education",
-            "title": "Master of Science",
+            "title": "Master of Science - Geoscience",
             "where": "University of Coimbra",
             "start": "09/2013",
             "end": "06/2015",
@@ -84,7 +87,7 @@
         {
             "id": "school1",
             "type": "education",
-            "title": "Bachelor of Science",
+            "title": "Bachelor of Science - Geology",
             "where": "University of Coimbra",
             "start": "09/2010",
             "end": "06/2013",
@@ -101,20 +104,21 @@
         {"id": 5, "name": "data science", "level": 4},
         {"id": 6, "name": "data engineering", "level": 3},
         {"id": 7, "name": "docker", "level": 2},
-        {"id": 8, "name": "gis", "level": 3},
-        {"id": 9, "name": "git", "level": 4},
-        {"id": 10, "name": "gitlab", "level": 3},
-        {"id": 11, "name": "html", "level": 2},
-        {"id": 12, "name": "javascript", "level": 1},
-        {"id": 13, "name": "machine learning", "level": 3},
-        {"id": 14, "name": "next.js", "level": 1},
-        {"id": 15, "name": "pandas", "level": 5},
-        {"id": 16, "name": "powershell", "level": 2},
-        {"id": 17, "name": "python", "level": 5},
-        {"id": 18, "name": "R", "level": 2},
-        {"id": 19, "name": "sklearn", "level": 4},
-        {"id": 20, "name": "spark", "level": 3},
-        {"id": 21, "name": "SQL", "level": 4},
-        {"id": 22, "name": "tailwindcss", "level": 1}
+        {"id": 8, "name": "dremio", "level": 2},
+        {"id": 9, "name": "gis", "level": 3},
+        {"id": 10, "name": "git", "level": 4},
+        {"id": 11, "name": "gitlab", "level": 3},
+        {"id": 12, "name": "html", "level": 2},
+        {"id": 13, "name": "javascript", "level": 1},
+        {"id": 14, "name": "machine learning", "level": 3},
+        {"id": 15, "name": "next.js", "level": 1},
+        {"id": 16, "name": "pandas", "level": 5},
+        {"id": 17, "name": "powershell", "level": 2},
+        {"id": 18, "name": "python", "level": 5},
+        {"id": 19, "name": "R", "level": 2},
+        {"id": 20, "name": "scikit-learn", "level": 4},
+        {"id": 21, "name": "spark", "level": 3},
+        {"id": 22, "name": "SQL", "level": 4},
+        {"id": 23, "name": "tailwindcss", "level": 1}
     ]
 }

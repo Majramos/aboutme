@@ -158,19 +158,20 @@ function SkillsSection( { props, tab } ) {
     const skills = props.cvdata.skills;
 
     const levelsbase = "project-tag inline-block rounded-full \
-                        font-semibold m-2 transition duration-[250ms] \
-                        hover:scale-110 py-1 ";
+                        font-semibold m-2.5 transition duration-[250ms] \
+                        hover:scale-110 ";
 
     const levels = {
-        1: levelsbase+"px-2 text-xs", // being developed
-        2: levelsbase+"px-3 text-sm",  // basic
-        3: levelsbase+"px-4 text-base", // intermediate
-        4: levelsbase+"px-5 text-lg",  // advanced
-        5: levelsbase+"px-6 text-xl", // expert
+        1: levelsbase+"py-1 px-4 text-sm", // being developed
+        2: levelsbase+"py-2 px-5 text-base", // basic
+        3: levelsbase+"py-2 px-6 text-lg", // intermediate
+        4: levelsbase+"py-3 px-7 text-xl",  // advanced
+        5: levelsbase+"py-3 px-8 text-2xl" // expert
     }
 
     return (
-        <div className="flex flex-wrap justify-center content-center items-center select-none">
+        <div className="flex flex-wrap justify-center sm:content-center items-center h-full select-none">
+            <div className="sm:w-11/12 md:w-10/12 flex flex-wrap justify-center items-center">
             { skills.map(
                 (skill) => (
                     <span key={ skill.id } className={ levels[skill.level] }>
@@ -178,6 +179,7 @@ function SkillsSection( { props, tab } ) {
                     </span>
                 ))
             }
+            </div>
         </div>
     )
 }
@@ -217,7 +219,7 @@ export function TabWrapper( { props }) {
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
         return (
             <div key={ tab } id={ tab+"-panel" }
-                className="tab-panel overflow-y-auto max-h-[30rem] px-3">
+                className="tab-panel overflow-y-auto h-[30rem] w-full px-3">
                 <Section props={ props } tab={ tab } />
             </div>
         )
