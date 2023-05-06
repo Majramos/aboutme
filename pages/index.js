@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 import fsPromises from 'fs/promises';
 import path from 'path';
@@ -6,6 +7,16 @@ import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
 import { ButtonBase } from '../components/Buttons';
 import { TabWrapper, TabButtonWrapper } from '../components/TabsSections';
+
+
+import { PDFDownloadLink } from '@react-pdf/renderer';
+import { MyResume } from '../components/cv_pdf.js';
+
+//import dynamic from 'next/dynamic';
+
+//const MyResume = dynamic(() => import('../components/cv_pdf.js'), {
+  //ssr: false,
+//});
 
 
 export async function getStaticProps() {
@@ -35,10 +46,27 @@ function Name({ children }) {
     )
 }
 
+//<Link href="/cv">
+    //<ButtonBase> Download CV / Resume </ButtonBase>
+//</Link>
+
+
+//{
+    //process.browser && <PDFDownloadLink document={<MyResume cvdata={ props.cvdata }/>} fileName="test_pdf.pdf">
+        //<ButtonBase> Download CV / Resume </ButtonBase>
+    //</PDFDownloadLink>
+//}
 
 export default function Home( props ) {
 
     const cvdata = props.cvdata
+
+    const [hasWindow, setHasWindow] = useState(false);
+    useEffect(() => {  // avoid hydration errors
+    if (typeof window !== "undefined") {
+        setHasWindow(true);
+    }
+    }, []);
 
     return (
         <Layout title="Marco Ramos">
@@ -66,9 +94,11 @@ export default function Home( props ) {
                     </p>
                 </div>
                 <div className="mt-5 flex justify-center">
-                    <Link href="/cv">
-                        <ButtonBase> Download CV / Resume </ButtonBase>
-                    </Link>
+                    {
+                        hasWindow && <PDFDownloadLink document={<MyResume cvdata={ props.cvdata }/>} fileName="test_pdf.pdf">
+                            <ButtonBase> Download CV / Resume </ButtonBase>
+                        </PDFDownloadLink>
+                    }
                 </div>
             </section>
             <section id="tab-section" className="m-10 mb-15">

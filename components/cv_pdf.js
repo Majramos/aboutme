@@ -1,5 +1,8 @@
 import React from 'react';
-import { Link, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import { Font, Link, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+
+// Disabling hyphenation
+Font.registerHyphenationCallback(word => [word]);
 
 // Create styles
 const styles = StyleSheet.create({
