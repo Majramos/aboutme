@@ -1,28 +1,32 @@
 {
-    "last_update": "2023-03-27",
+    "last_update": "2023-05-06",
     "first_name": "Marco",
     "last_name": "Ramos",
     "full_name": "Marco Ramos",
-    "ocupation": "Data / Geo Scientist",
+    "ocupation": "Data Scientist",
     "email": {
         "primary": "marco@marcoramos.me",
         "secondary": "majramos@gmail.com"
     },
     "socials": [
         {
-            "name": "Linkedin",
+            "name": "marcoramos.me",
+            "link": "https://marcoramos.me"
+        },
+        {
+            "name": "linkedin.com/in/majramos",
             "link": "https://linkedin.com/in/majramos"
         },
         {
-            "name": "GitLab",
+            "name": "gitlab.com/majramos",
             "link": "https://gitlab.com/majramos"
         },
         {
-            "name": "GitHub",
+            "name": "github.com/Majramos",
             "link": "https://github.com/Majramos"
         },
         {
-            "name": "Twitter",
+            "name": "twitter.com/majramos",
             "link": "https://twitter.com/majramos"
         }
     ],
@@ -43,8 +47,8 @@
                 "Work with internal clients to understand the requirements of the business and lead the development of statistical reports and visualizations in Power BI, defining data rules for and KPIs for performance metrics.",
                 "Apply BI tools and data analysis techniques to develop, test and validate hypotheses to provide practical ideas and recommendations for the business.",
                 "Perform data mining using basket analysis to provide a better understanding of the retail customers purchasing patterns.",
-                "Provide customer segmentation models based on their activity to select the best next action",
-                "Build and mantained basic ETL pipelines for ingesting data from diverse data sources, including web scraping, ensuring data quality. using Python, Spark and S3"
+                "Provide customer segmentation models based on their activity to select the best next action.",
+                "Build and mantained basic ETL pipelines for ingesting data from diverse data sources, including web scraping, while ensuring data quality, using Python, Spark and S3."
             ]
         },
         {
@@ -69,7 +73,7 @@
             "start": "03/2016",
             "end": "03/2017",
             "description": [
-                "Master's degree in Petroleum Engineering sponsored by GALP"
+                "Master's degree in Petroleum Engineering sponsored by GALP."
             ]
         },
         {
@@ -81,7 +85,7 @@
             "end": "06/2015",
             "description": [
                 "Master's degree in Geoscience specializing in the area of expertise of geological resources.",
-                "Dissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)"
+                "Dissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)."
             ]
         },
         {
@@ -92,7 +96,7 @@
             "start": "09/2010",
             "end": "06/2013",
             "description": [
-                "Bachelor's degree in Geology"
+                "Bachelor's degree in Geology."
             ]
         }
     ],
