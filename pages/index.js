@@ -1,10 +1,10 @@
-import { useEffect } from 'react';
+import Link from 'next/link';
 import fsPromises from 'fs/promises';
 import path from 'path';
 
 import Layout from '../components/Layout';
 import HomeLogos from '../components/Logos';
-import { TabButtons } from '../components/Buttons';
+import { ButtonBase } from '../components/Buttons';
 import { TabWrapper, TabButtonWrapper } from '../components/TabsSections';
 
 
@@ -64,6 +64,11 @@ export default function Home( props ) {
                     <p className="text-center text-lg font-bold pt-2">
                         { cvdata.full_name }
                     </p>
+                </div>
+                <div className="mt-5 flex justify-center">
+                    <Link href="/cv">
+                        <ButtonBase> Download CV / Resume </ButtonBase>
+                    </Link>
                 </div>
             </section>
             <section id="tab-section" className="m-10 mb-15">
