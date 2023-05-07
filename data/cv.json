@@ -1,5 +1,5 @@
 {
-    "last_update": "2023-05-06",
+    "last_update": "2023-05-08",
     "first_name": "Marco",
     "last_name": "Ramos",
     "full_name": "Marco Ramos",
@@ -48,7 +48,7 @@
                 "Apply BI tools and data analysis techniques to develop, test and validate hypotheses to provide practical ideas and recommendations for the business.",
                 "Perform data mining using basket analysis to provide a better understanding of the retail customers purchasing patterns.",
                 "Provide customer segmentation models based on their activity to select the best next action.",
-                "Build and mantained basic ETL pipelines for ingesting data from diverse data sources, including web scraping, while ensuring data quality, using Python, Spark and S3."
+                "Build and mantained basic ETL pipelines for ingesting data from diverse data sources, including web scraping, while ensuring data quality, using Python, Spark and AWS S3."
             ]
         },
         {
@@ -106,7 +106,7 @@
         {"id": 3, "name": "business intelligence", "level": 4},
         {"id": 4, "name": "css", "level": 1},
         {"id": 5, "name": "data science", "level": 4},
-        {"id": 6, "name": "data engineering", "level": 3},
+        {"id": 6, "name": "data engineering", "level": 4},
         {"id": 7, "name": "docker", "level": 2},
         {"id": 8, "name": "dremio", "level": 2},
         {"id": 9, "name": "gis", "level": 3},
@@ -114,14 +114,14 @@
         {"id": 11, "name": "gitlab", "level": 3},
         {"id": 12, "name": "html", "level": 2},
         {"id": 13, "name": "javascript", "level": 1},
-        {"id": 14, "name": "machine learning", "level": 3},
+        {"id": 14, "name": "machine learning", "level": 4},
         {"id": 15, "name": "next.js", "level": 1},
         {"id": 16, "name": "pandas", "level": 5},
         {"id": 17, "name": "powershell", "level": 2},
         {"id": 18, "name": "python", "level": 5},
         {"id": 19, "name": "R", "level": 2},
         {"id": 20, "name": "scikit-learn", "level": 4},
-        {"id": 21, "name": "spark", "level": 3},
+        {"id": 21, "name": "(py)spark", "level": 4},
         {"id": 22, "name": "SQL", "level": 4},
         {"id": 23, "name": "tailwindcss", "level": 1}
     ]
