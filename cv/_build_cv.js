@@ -4,12 +4,13 @@ import path from 'path';
 import { React, useEffect } from 'react';
 
 import { createRoot } from 'react-dom/client';
-import { PDFViewer } from '@react-pdf/renderer';
-//import ReactPDF from '@react-pdf/renderer';
+import { PDFViewer, renderToFile } from '@react-pdf/renderer';
+import ReactPDF from '@react-pdf/renderer';
 
 import Layout from '../components/Layout';
 import { MyResume } from '../components/cv_pdf.js';
 
+import { saveAs } from 'file-saver';
 
 export async function getStaticProps() {
 
@@ -25,9 +26,6 @@ export async function getStaticProps() {
 }
 
 
-// TODO:
-// https://react-pdf.org/advanced#on-the-fly-rendering
-
 export default function Resume( props ) {
 
     const App = () => (
@@ -35,8 +33,6 @@ export default function Resume( props ) {
             <MyResume cvdata={ props.cvdata }/>
         </PDFViewer>
     );
-
-    //ReactPDF.render(<MyResume />, `${__dirname}/example.pdf`);
 
     useEffect(() => {
         const container = document.getElementById('resume_pdf');
