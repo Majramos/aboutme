@@ -1,12 +1,12 @@
 import fsPromises from 'fs/promises';
 import path from 'path';
-
 import { jsPDF } from "jspdf";
 
 
 const cvfilePath = path.join(process.cwd(), 'data/cv.json');
 const jsonDatacvdata = await fsPromises.readFile(cvfilePath);
 const cvdata = JSON.parse(jsonDatacvdata);
+
 
 // create pdf
 const pdf = new jsPDF({
@@ -15,6 +15,7 @@ const pdf = new jsPDF({
     format: "a4"
 });
 
+
 pdf.setProperties({
     title: "Marco Ramos CV",
     subject: "Short written summary of a person's career, qualifications, and education",
@@ -22,6 +23,7 @@ pdf.setProperties({
     keywords: "curriculum vitae, marco ramos, jspdf",
     creator: "Marco Ramos"
 });
+
 
 const pageWidth = pdf.getPageWidth();  // 210
 const pageHeight = pdf.getPageHeight();  // 297
@@ -66,34 +68,40 @@ pdf.setFontSize(38)
 
 let startBodyHeight = 40;
 
+let rightRowHeight = startBodyHeight;
+
 /*
  * Contact Section
  */
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
-    .text("Contacts", pageWidth-10, startBodyHeight, {"align": "right"})
+    .text("Contacts", pageWidth-10, rightRowHeight, {"align": "right"})
     .setFontSize(10)
     .setFont(fontFamily, "italic")
-    .text(cvdata.email.primary, pageWidth-12, startBodyHeight+6,
-        {"align": "right"}
+    .text(cvdata.email.primary, pageWidth-12,
+        rightRowHeight = rightRowHeight+6, {"align": "right"}
     )
-    .text(cvdata.email.secondary, pageWidth-12, startBodyHeight+11,
-        {"align": "right"}
+    .text(cvdata.email.secondary, pageWidth-12,
+        rightRowHeight = rightRowHeight+5, {"align": "right"}
     );
 
 /*
  * Socials Section
  */
-let socialsHeight = startBodyHeight+20;
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
-    .text("Socials", pageWidth-10, socialsHeight, {"align": "right"});
+    .text("Socials", pageWidth-10, rightRowHeight = rightRowHeight+9,
+        {"align": "right"}
+    );
 
+rightRowHeight = rightRowHeight+6
 cvdata.socials.map((social, index) => {
+    if ( index >= 1) { index = 1 }
+    rightRowHeight = rightRowHeight+(index*5);
+
     pdf.setFontSize(10)
         .setFont(fontFamily, "italic")
-        .textWithLink(social.name, pageWidth-12,
-            socialsHeight+6+((index)*5),
+        .textWithLink(social.name, pageWidth-12, rightRowHeight,
             {"align": "right", "url": social.link}
         );
 });
@@ -104,22 +112,28 @@ cvdata.socials.map((social, index) => {
 let skillsHeight = 95;
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
-    .text("Skills", pageWidth-10, skillsHeight, {"align": "right"});
+    .text("Skills", pageWidth-10, rightRowHeight = rightRowHeight+9, {"align": "right"});
 
+rightRowHeight = rightRowHeight+6
 cvdata.skills.map((skill, index) => {
+    if ( index >= 1) { index = 1 }
+    rightRowHeight = rightRowHeight+(index*7);
 
-    let skillSpacing = (skillsHeight+8)+(index*7);
 
-    pdf.setFontSize(10)
+    pdf.setFontSize(9)
         .setFont(fontFamily, "normal")
-        .text(skill.name, pageWidth-12, skillSpacing, {"align": "right"})
+        .text(skill.name, pageWidth-12, rightRowHeight,
+            {"align": "right"}
+        )
         .setDrawColor("#e4e4e4")
         .setLineWidth(1)
-        .line(pageWidth-50, skillSpacing+2, pageWidth-10, skillSpacing+2)
+        .line(pageWidth-50, rightRowHeight+2, pageWidth-10,
+            rightRowHeight+2
+        )
         .setDrawColor("#585858")
         .setLineWidth(1)
-        .line(pageWidth-10-(8*skill.level), skillSpacing+2,
-            pageWidth-10, skillSpacing+2
+        .line(pageWidth-10-(8*skill.level), rightRowHeight+2,
+            pageWidth-10, rightRowHeight+2
         );
 });
 
