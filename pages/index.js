@@ -66,7 +66,7 @@ export default function Home( props ) {
                     </p>
                 </div>
                 <div className="mt-5 flex justify-center">
-                    <Link href="/marco_ramos_cv.pdf">
+                    <Link id="download-cv-button" href="/marco_ramos_cv.pdf" target="_blank" rel="noopener noreferrer">
                         <ButtonBase> Download CV / Resume </ButtonBase>
                     </Link>
                 </div>
