@@ -9,21 +9,38 @@ export default function MyApp({ Component, pageProps }) {
         <Script id="show-links-script" src="/scripts/showlinks.js" strategy="beforeInteractive" />
         <Component {...pageProps} />
 
-        {/* Google tag (gtag.js) */}
+        {/*  Google Tag Manager */}
         <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-PFT90JX0Q4"
+            id="gtag-base"
             strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-            {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-5XGV4NT')
 
-                gtag('config', 'G-PFT90JX0Q4');
-            `}
-        </Script>
+              `,
+            }}
+        />
+
+
     </>
     )
 }
 
+//{/* Google tag (gtag.js) */}
+//<Script
+    //src="https://www.googletagmanager.com/gtag/js?id=G-PFT90JX0Q4"
+    //strategy="afterInteractive"
+///>
+//<Script id="google-analytics" strategy="afterInteractive">
+    //{`
+        //window.dataLayer = window.dataLayer || [];
+        //function gtag(){dataLayer.push(arguments);}
+        //gtag('js', new Date());
+
+        //gtag('config', 'G-PFT90JX0Q4');
+    //`}
+//</Script>
