@@ -127,7 +127,7 @@ function _buildProjSection( proj ) {
                 <div className="flex items-center justify-between mx-5">
                     { proj.state === 'production' ? <_production /> : <_development /> }
                     <Link href={ proj.url } legacyBehavior>
-                        <a target="_blank" rel="noopener noreferrer">
+                        <a id={ proj.id+"-button" }target="_blank" rel="noopener noreferrer">
                             <ButtonBase extra="text-xs sm:text-sm px-3 py-1">
                                 Visit
                             </ButtonBase>

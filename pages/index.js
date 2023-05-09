@@ -41,7 +41,7 @@ export default function Home( props ) {
     const cvdata = props.cvdata
 
     return (
-        <Layout title="Marco Ramos">
+        <Layout title="Marco Ramos aka majramos">
             <section className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
                <div className="flex justify-center">
                     <Name>{ cvdata.first_name }</Name>
@@ -66,7 +66,7 @@ export default function Home( props ) {
                     </p>
                 </div>
                 <div className="mt-5 flex justify-center">
-                    <Link href="/marco_ramos_cv.pdf">
+                    <Link id="download-cv-button" href="/marco_ramos_cv.pdf" target="_blank" rel="noopener noreferrer">
                         <ButtonBase> Download CV / Resume </ButtonBase>
                     </Link>
                 </div>

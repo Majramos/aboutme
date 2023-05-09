@@ -36,8 +36,8 @@ export function GoHome() {
 
 export function TabButtons({ id, href, children }) {
     return (
-        <Link href={ href }>
-            <ButtonBase id={ id } extra="w-20 sm:w-28 h-10 text-xs sm:text-sm">
+        <Link id={ id } href={ href }>
+            <ButtonBase extra="w-20 sm:w-28 h-10 text-xs sm:text-sm">
                 { children }
             </ButtonBase>
         </Link>
