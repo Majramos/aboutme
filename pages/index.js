@@ -41,7 +41,7 @@ export default function Home( props ) {
     const cvdata = props.cvdata
 
     return (
-        <Layout title="Marco Ramos">
+        <Layout title="Marco Ramos aka majramos">
             <section className="relative flex min-h-screen flex-col justify-center text-center overflow-hidden">
                <div className="flex justify-center">
                     <Name>{ cvdata.first_name }</Name>
