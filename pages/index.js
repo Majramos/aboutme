@@ -10,17 +10,12 @@ import { TabWrapper, TabButtonWrapper } from '../components/TabsSections';
 
 export async function getStaticProps() {
     const cvfilePath = path.join(process.cwd(), 'data/cv.json');
-    const filePathprojects = path.join(process.cwd(), 'data/projects.json');
-
     const jsonDatacvdata = await fsPromises.readFile(cvfilePath);
-    const jsonDataprojects = await fsPromises.readFile(filePathprojects);
-
     const cvdata = JSON.parse(jsonDatacvdata);
-    const projects = JSON.parse(jsonDataprojects);
 
     return {
         props: {
-            cvdata, projects
+            cvdata
         }
     }
 }
