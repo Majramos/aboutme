@@ -15,6 +15,9 @@ There are available 4 commands:
 - `run` run the container
 - `rm` remove the stopped container
 
+After starting the container and making sure one is in the terminal of the containter, run `npm install` to install all the required dependencies
+
+
 ## Build
 Build the site using next.js
 ```bash
