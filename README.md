@@ -1,5 +1,18 @@
 # aboutme
 
+<div align="center">
+
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fmarcoramos.me%2F)
+![Gitlab Pipeline Status](https://img.shields.io/gitlab/pipeline-status/majramos%2Fmajramos.gitlab.io)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Majramos/aboutme/dev)
+![GitHub Tag](https://img.shields.io/github/v/tag/Majramos/aboutme?sort=date)
+![GitHub License](https://img.shields.io/github/license/Majramos/aboutme)
+
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![tailwind](https://img.shields.io/badge/tailwindcss-0F172A?&logo=tailwindcss)
+
+</div>
+
 Build my profile the site [marcoramos.me](https://marcoramos.me)
 
 
