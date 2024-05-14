@@ -141,22 +141,19 @@ body {
 
 #work:checked ~ .tabs-panels #work-panel,
 #education:checked ~ .tabs-panels #education-panel,
-#skills:checked ~ .tabs-panels #skills-panel,
-#projects:checked ~ .tabs-panels #projects-panel  {
+#skills:checked ~ .tabs-panels #skills-panel  {
     display: inline-block
 }
 
 .body-light #work:checked ~ .tabs #work-tab,
 .body-light #education:checked ~ .tabs #education-tab,
-.body-light #skills:checked ~ .tabs #skills-tab,
-.body-light #projects:checked ~ .tabs #projects-tab {
+.body-light #skills:checked ~ .tabs #skills-tab {
     border-bottom: 2px solid var(--dark);
 }
 
 .body-dark #work:checked ~ .tabs #work-tab,
 .body-dark #education:checked ~ .tabs #education-tab,
-.body-dark #skills:checked ~ .tabs #skills-tab,
-.body-dark #projects:checked ~ .tabs #projects-tab {
+.body-dark #skills:checked ~ .tabs #skills-tab {
     border-bottom: 2px solid var(--light);
 }
 
