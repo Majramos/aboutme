@@ -4,6 +4,7 @@ import Link from 'next/link';
 export function ButtonBase({ id, extra="px-4 py-2", children }) {
     return (
         <button id={ id } type="button"
+			aria-label={ id }
             className={`rounded-full border-2 text-md transition duration-150 ease-in-out ${extra}`}>
             { children }
         </button>
