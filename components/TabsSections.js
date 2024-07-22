@@ -36,9 +36,9 @@ function _buildCvSection( job ) {
                 </p>
             </div>
             <div className="mt-2 ml-4 mb-6">
-                <h4 className="mb-1.5 text-lg sm:text-xl font-semibold">
+                <h1 className="mb-1.5 text-lg sm:text-xl font-semibold">
                     { job.title }
-                </h4>
+                </h1>
                 <p className="my-2 text-xs sm:text-sm text-right">
                     { job.where }
                 </p>
