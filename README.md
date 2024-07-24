@@ -30,6 +30,7 @@ There are available 4 commands:
 
 After starting the container and making sure one is in the terminal of the containter, run `npm install` to install all the required dependencies
 
+Disable next.js telemetry with `npx next telemetry disable` or by setting `NEXT_TELEMETRY_DISABLED=1`
 
 ## Build
 Build the site using next.js
