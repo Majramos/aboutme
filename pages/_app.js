@@ -5,8 +5,7 @@ import Script from 'next/script';
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
-        <Script id="darkmode-script" src="/scripts/darkmode.js" strategy="beforeInteractive" />
-        <Script id="show-links-script" src="/scripts/showlinks.js" strategy="beforeInteractive" />
+        <Script id="base-script" src="/scripts/scripts.js" strategy="beforeInteractive" />
         <Component {...pageProps} />
 
         {/*  Google Tag Manager */}
@@ -20,12 +19,9 @@ export default function MyApp({ Component, pageProps }) {
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
                 })(window,document,'script','dataLayer','GTM-5XGV4NT')
-
               `,
             }}
         />
-
-
     </>
     )
 }
