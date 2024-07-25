@@ -8,6 +8,7 @@
     src: url('/fonts/mononoki-Regular-Nerd-Font-Complete-Mono.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
@@ -15,6 +16,7 @@
     src: url('/fonts/mononoki-Bold-Nerd-Font-Complete-Mono.ttf') format('truetype');
     font-weight: 700;
     font-style: bold;
+	font-display: swap;
 }
 
 @font-face {
@@ -22,11 +24,12 @@
     src: url('/fonts/mononoki-Italic-Nerd-Font-Complete-Mono.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
+	font-display: swap;
 }
 
 :root {
-    --light: #f4f4f5;/* zinc-100 */
-    --dark: #3f3f46;/* zinc-700 */
+    --light: #f4f4f5; /* zinc-100 */
+    --dark: #3f3f46; /* zinc-700 */
 }
 
 html {
@@ -174,6 +177,7 @@ body {
     visibility: visible;
 }
 
+/* CHECK IF THIS IS NEEDED !!! */
 .cv-icon {
     border-color: rgb(113 113 122);
     background-color: rgb(113 113 122);
