@@ -1,7 +1,6 @@
 /*
  * Script to handle the theme switching
  */
-
 const OtherTheme = { 'dark': 'light', 'light': 'dark' }
 
 function setTheme( theme ) {
@@ -43,4 +42,13 @@ function changeTheme() {
             setTheme('dark');
         }
     }
+}
+
+/*
+ * show socials links when hovering over icons
+ */
+function showlink( link ) {
+    var linkshower = document.getElementById('linkshower');
+    linkshower.getElementsByTagName('p')[0].textContent = link;    
+    linkshower.style.display = "inline-block";
 }

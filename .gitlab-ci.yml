@@ -17,6 +17,7 @@ build:
   before_script:
     - npm install
   script:
+    - npx next telemetry disable
     - npm run build
     - node cv/create_pdf.mjs
   artifacts:
@@ -34,6 +35,7 @@ pages:
     - find public -type f -name "*.html" | xargs rm -rf
   script:
     - mv build/* public/
+    - gzip -k -9 $(find public -type f)
   after_script:
     - rm -rf build
   artifacts:
