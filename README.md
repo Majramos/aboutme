@@ -20,7 +20,7 @@ Build my profile the site [marcoramos.me](https://marcoramos.me)
 
 This project uses container to setup the developement environment
 
-To setup the environment run one of the available setup scripts in the `/env` directory. Choose the `.ps1` if using powershell or the `.sh` if using bash.
+To setup the environment run one of the available `setup` scripts in the `/env` directory. Choose the `.ps1` if using powershell or the `.sh` if using bash.
 
 There are available 4 commands:
 - `build` build a image with node
@@ -42,3 +42,8 @@ Generate the cv pdf
 ```bash
 node cv/create_pdf.mjs
 ```
+
+## Fonts
+**mononoki Nerd Font Mono** by:
+- https://github.com/ryanoasis/nerd-fonts/
+- https://github.com/madmalik/mononoki
