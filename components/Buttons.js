@@ -5,7 +5,7 @@ export function ButtonBase({ id, extra="px-4 py-2", children }) {
     return (
         <button id={ id } type="button"
 			aria-label={ id }
-            className={`rounded-full border-2 text-md transition duration-150 ease-in-out ${extra}`}>
+            className={`rounded-full border-2 text-md transition duration-[250ms] ${extra} hover:scale-110`}>
             { children }
         </button>
     )
@@ -30,7 +30,7 @@ export function ThemeSwitch() {
 export function GoHome() {
     return (
         <Link href="/">
-            <ButtonBase id="go-home" extra="w-32 h-10 text-xs sm:text-sm">Go Back Home</ButtonBase>
+            <ButtonBase id="go-home" extra="w-36 h-10 text-xs sm:text-sm">Go Back Home</ButtonBase>
         </Link>
     )
 }
