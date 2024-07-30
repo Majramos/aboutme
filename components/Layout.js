@@ -15,7 +15,7 @@ export default function Layout({ title, children }) {
         <>
             <Head>
                 <title>{title}</title>
-                <meta charset="utf-8" />
+                <meta charSet="utf-8" />
                 <meta name="author" content="Marco Ramos" />
                 <meta name="description" content={ metaDescription } />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
