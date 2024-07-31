@@ -5,23 +5,23 @@
 
 @font-face {
     font-family: 'mononoki';
-    src: url('/fonts/mononoki-Regular-Nerd-Font-Complete-Mono.ttf') format('truetype');
+	src: url('/fonts/mononoki-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-    font-family: 'mononoki-bold';
-    src: url('/fonts/mononoki-Bold-Nerd-Font-Complete-Mono.ttf') format('truetype');
+    font-family: 'mononoki';
+    src: url('/fonts/mononoki-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: bold;
 	font-display: swap;
 }
 
 @font-face {
-    font-family: 'mononoki-italic';
-    src: url('/fonts/mononoki-Italic-Nerd-Font-Complete-Mono.ttf') format('truetype');
+    font-family: 'mononoki';
+    src: url('/fonts/mononoki-Italic.woff2') format('woff2');
     font-weight: 400;
     font-style: italic;
 	font-display: swap;
