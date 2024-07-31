@@ -127,7 +127,7 @@ export function TabWrapper( { props }) {
     const tabs_class = "inline-block text-center text-sm sm:text-base select-none \
                         cursor-pointer grow py-2.5 mx-3 border-b-2 \
                         border-transparent hover:border-zinc-500 \
-                        transition duration-300 backdrop-blur-sm \
+                        transition duration-[250ms] backdrop-blur-sm \
                         backdrop-opacity-25"
 
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
