@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { ThemeSwitch } from '../components/Buttons';
 
 export default function Layout({ title, children }) {
+
     useEffect(() => {
-        themeChecker();
         document.getElementById('theme-toggle').addEventListener('click', changeTheme);
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeTheme);
     }, []);
