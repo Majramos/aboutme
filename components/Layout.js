@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { ThemeSwitch } from '../components/Buttons';
+import Footer from '../components/Footer';
 
 export default function Layout({ title, children }) {
 
@@ -48,10 +49,10 @@ export default function Layout({ title, children }) {
             <main className="container mx-auto min-h-screen">
                 {children}
             </main>
+            <Footer />
             <div className="fixed bottom-4 right-4 m-2">
                 <ThemeSwitch />
             </div>
         </>
     );
 }
-
