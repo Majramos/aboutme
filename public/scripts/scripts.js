@@ -1,19 +1,15 @@
 /*
  * Script to handle the theme switching
  */
-const OtherTheme = { 'dark': 'light', 'light': 'dark' }
-
 function setTheme( theme ) {
-    var other_theme = OtherTheme[theme]
 
-    document.body.classList.remove('body-' + other_theme);
-    document.body.classList.add('body-' + theme);
-
+    if (theme === 'light') {
+       document.body.classList.remove('dark');
+    } else {
+        document.body.classList.add('dark');
+    }
     localStorage.setItem('color-theme', theme);
-
-    document.getElementById('theme-toggle-' + theme + '-icon').style.display = 'inherit'; 
-    document.getElementById('theme-toggle-' + other_theme + '-icon').style.display = 'none'; 
-
+    var other_theme = { 'dark': 'light', 'light': 'dark' }[theme]
     document.getElementById('theme-text').innerText = 'Switch to ' + other_theme + ' mode';
 }
 
@@ -36,7 +32,7 @@ function changeTheme() {
         }
     // if NOT set via local storage previously, keep as fallback option
     } else {
-        if (document.body.classList.contains('body-dark')) {
+        if (document.body.classList.contains('dark')) {
             setTheme('light');
         } else {
             setTheme('dark');
@@ -47,8 +43,8 @@ function changeTheme() {
 /*
  * show socials links when hovering over icons
  */
+const linkshower = document.getElementById('linkshower');
 function showlink( link ) {
-    var linkshower = document.getElementById('linkshower');
-    linkshower.getElementsByTagName('p')[0].textContent = link;    
+    linkshower.textContent = link;
     linkshower.style.display = "inline-block";
 }
