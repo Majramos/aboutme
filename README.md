@@ -43,7 +43,13 @@ Generate the cv pdf
 node cv/create_pdf.mjs
 ```
 
-## Fonts
+## References
+
+### Font
 **mononoki Nerd Font Mono** by:
 - https://github.com/ryanoasis/nerd-fonts/
 - https://github.com/madmalik/mononoki
+
+### Color Scheme
+**solarized** by Ethan Schoonover_
+- https://ethanschoonover.com/solarized/
