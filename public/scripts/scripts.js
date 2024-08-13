@@ -43,8 +43,8 @@ function changeTheme() {
 /*
  * show socials links when hovering over icons
  */
-const linkshower = document.getElementById('linkshower');
 function showlink( link ) {
-    linkshower.textContent = link;
+    let linkshower = document.getElementById('linkshower');
     linkshower.style.display = "inline-block";
+    linkshower.textContent = link;
 }
