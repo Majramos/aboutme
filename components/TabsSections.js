@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { ButtonBase, TabButtons } from '../components/Buttons';
+import { TabButtons } from '../components/Buttons';
 
 
 function _work() {
@@ -28,7 +28,7 @@ function _buildCvSection( job ) {
             <div className="flex-start flex items-center pt-3">
                 <div className="-ml-[10px] flex mr-1 h-[20px] w-[20px] \
                                 rounded-full items-center \
-                                justify-center cv-icon">
+                                justify-center timeline-icon">
                     { job.type === 'work' ? <_work /> : <_school /> }
                 </div>
                 <p className="text-xs sm:text-sm italic">
@@ -73,7 +73,7 @@ function SkillsSection( { props, tab } ) {
     const skills = props.cvdata.skills;
 
     const levelsbase = "project-tag inline-block rounded-full \
-                        font-semibold m-2.5 transition duration-[250ms] \
+                        font-semibold m-2.5 \
                         hover:scale-110 ";
 
     const levels = {
@@ -109,7 +109,7 @@ const tabsButton = {
 
 export function TabButtonWrapper() {
     return (
-        <div className="mt-14 space-x-3 sm:space-x-6">
+        <>
             { Object.keys(tabsButton).map(
                 tab => (
                     <TabButtons key={ tab } id={ tab+"-button" }  href={ "#"+tab+"-tab" }>
@@ -117,7 +117,7 @@ export function TabButtonWrapper() {
                     </TabButtons>
                 ))
             }
-        </div>
+        </>
     )
 }
 
@@ -125,10 +125,8 @@ export function TabButtonWrapper() {
 export function TabWrapper( { props }) {
 
     const tabs_class = "inline-block text-center text-sm sm:text-base select-none \
-                        cursor-pointer grow py-2.5 mx-3 border-b-2 \
-                        border-transparent hover:border-zinc-500 \
-                        transition duration-300 backdrop-blur-sm \
-                        backdrop-opacity-25"
+                        cursor-pointer grow py-2.5 mx-3 border-b-2 border-transparent \
+                        backdrop-blur-sm backdrop-opacity-25"
 
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
         return (

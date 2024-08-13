@@ -4,8 +4,8 @@ import Link from 'next/link';
 export function ButtonBase({ id, extra="px-4 py-2", children }) {
     return (
         <button id={ id } type="button"
-			aria-label={ id }
-            className={`rounded-full border-2 text-md transition duration-150 ease-in-out ${extra}`}>
+            aria-label={ id }
+            className={`rounded-full text-xs sm:text-sm ${extra}`}>
             { children }
         </button>
     )
@@ -13,8 +13,8 @@ export function ButtonBase({ id, extra="px-4 py-2", children }) {
 
 export function ThemeSwitch() {
     return (
-        <ButtonBase id="theme-toggle" extra="p-2 flex">
-            <p id="theme-text" className="hidden pl-1 pr-2">Switch theme mode</p>
+        <ButtonBase id="theme-toggle" extra="p-2 flex justify-center">
+            <p id="theme-text" className="hidden px-2">Switch theme</p>
             <svg id="theme-toggle-dark-icon" className="w-4 h-4" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
@@ -30,7 +30,9 @@ export function ThemeSwitch() {
 export function GoHome() {
     return (
         <Link href="/">
-            <ButtonBase id="go-home" extra="w-32 h-10 text-xs sm:text-sm">Go Back Home</ButtonBase>
+            <ButtonBase id="go-home" extra="w-36 h-10">
+                Go Back Home
+            </ButtonBase>
         </Link>
     )
 }
@@ -38,7 +40,7 @@ export function GoHome() {
 export function TabButtons({ id, href, children }) {
     return (
         <Link id={ id } href={ href }>
-            <ButtonBase extra="w-20 sm:w-28 h-10 text-xs sm:text-sm">
+            <ButtonBase extra="w-20 sm:w-28 h-10 mx-2">
                 { children }
             </ButtonBase>
         </Link>

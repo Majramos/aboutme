@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { ThemeSwitch } from '../components/Buttons';
+import Footer from '../components/Footer';
 
 export default function Layout({ title, children }) {
+
     useEffect(() => {
-        themeChecker();
         document.getElementById('theme-toggle').addEventListener('click', changeTheme);
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', changeTheme);
     }, []);
@@ -15,7 +16,7 @@ export default function Layout({ title, children }) {
         <>
             <Head>
                 <title>{title}</title>
-                <meta charset="utf-8" />
+                <meta charSet="utf-8" />
                 <meta name="author" content="Marco Ramos" />
                 <meta name="description" content={ metaDescription } />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -48,10 +49,10 @@ export default function Layout({ title, children }) {
             <main className="container mx-auto min-h-screen">
                 {children}
             </main>
+            <Footer />
             <div className="fixed bottom-4 right-4 m-2">
                 <ThemeSwitch />
             </div>
         </>
     );
 }
-
