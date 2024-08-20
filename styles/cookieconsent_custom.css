@@ -1,0 +1,100 @@
+#cc-main {
+    --cc-font-family: 'mononoki', 'sans-serif';
+    
+    --cc-bg: var(--base3);
+    --cc-primary-color: var(--base01);
+    --cc-secondary-color: var(--base00);
+
+    --cc-btn-primary-bg: var(--yellow);
+    --cc-btn-primary-color: var(--base3);
+    --cc-btn-primary-border-color: var(--cc-btn-primary-color);
+    --cc-btn-primary-hover-bg: var(--green);
+    --cc-btn-primary-hover-color: var(--base3);
+    --cc-btn-primary-hover-border-color: var(--cc-btn-primary-hover-bg);
+
+    --cc-btn-secondary-bg: var(--base0);
+    --cc-btn-secondary-color: var(--base3);
+    --cc-btn-secondary-border-color: var(--cc-btn-secondary-bg);
+    --cc-btn-secondary-hover-bg: var(--base2);
+    --cc-btn-secondary-hover-color: var(--base01);
+    --cc-btn-secondary-hover-border-color: var(--cc-btn-secondary-hover-bg);
+
+    --cc-separator-border-color: var(--base2);
+
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+    --cc-toggle-off-bg: var(--base0);
+    --cc-toggle-on-knob-bg: var(--cc-bg);
+    --cc-toggle-off-knob-bg: var(--cc-btn-primary-color);
+
+    --cc-toggle-enabled-icon-color: var(--cc-btn-primary-color);
+    --cc-toggle-disabled-icon-color: var(--cc-btn-primary-color);
+
+    --cc-toggle-readonly-bg: var(--green);
+    --cc-toggle-readonly-knob-bg: var(--base3);
+    --cc-toggle-readonly-knob-icon-color: var(--green);
+
+    --cc-cookie-category-block-bg: var(--base2);
+    --cc-cookie-category-block-border: var(--base2);
+    --cc-cookie-category-block-hover-bg: var(--blue);
+    --cc-cookie-category-block-hover-border: var(--blue);
+    --cc-cookie-category-expanded-block-hover-bg: var(--base2);
+    --cc-cookie-category-expanded-block-bg: var(--base2);
+
+    --cc-overlay-bg: rgba(238, 232, 213, .85) !important;
+
+    --cc-footer-border-color: var(--base0);
+    --cc-footer-bg: var(--base3);
+
+    --cc-link-color: var(--yellow);
+}
+
+#cc-main .pm__close-btn>span>svg, #cc-main .pm__section-arrow>svg {
+    stroke: var(--base3) !important;
+    background-color: transparent !important;
+}
+
+#cc-main .pm__badge {
+    background-color: transparent !important;
+}
+
+.dark #cc-main{
+    --cc-bg: var(--base03);
+    --cc-primary-color: var(--base1);
+    --cc-secondary-color: var(--base0);
+
+    --cc-btn-primary-bg: var(--cyan);
+    --cc-btn-primary-color: var(--base03);
+    --cc-btn-primary-hover-bg: var(--violet);
+    --cc-btn-primary-hover-color: var(--base03);
+
+    --cc-btn-secondary-bg: var(--base00);
+    --cc-btn-secondary-color: var(--base03);
+    --cc-btn-secondary-hover-bg: var(--base02);
+    --cc-btn-secondary-hover-color: var(--base1);
+
+    --cc-separator-border-color: var(--base02);
+
+    --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+    --cc-toggle-off-bg: var(--base00);
+    --cc-toggle-on-knob-bg: var(--cc-bg);
+
+    --cc-toggle-readonly-bg: var(--green);
+    --cc-toggle-readonly-knob-bg: var(--base03);
+    --cc-toggle-readonly-knob-icon-color: var(--green);
+
+    --cc-cookie-category-block-bg: var(--base02);
+    --cc-cookie-category-block-border: var(--base02);
+    --cc-cookie-category-block-hover-bg: var(--violet);
+    --cc-cookie-category-block-hover-border: var(--violet);
+    --cc-cookie-category-expanded-block-hover-bg: var(--base02);
+    --cc-cookie-category-expanded-block-bg: var(--base02);
+
+    --cc-overlay-bg: rgba(7, 54, 66, .85) !important;
+
+    --cc-footer-border-color: var(--base00);
+    --cc-footer-bg: var(--base03);
+}
+
+.dark #cc-main .pm__close-btn>span>svg, .dark #cc-main .pm__section-arrow>svg {
+    stroke: var(--base03) !important;
+}
