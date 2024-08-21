@@ -72,34 +72,34 @@ export default function Socials() {
     }, []);
 
     return (
-		<div className="flex justify-center space-x-10 sm:space-x-20">
-			<a id="emaillink" href="mailto:marco@marcoramos.me" aria-label="link to email">
-				<Email />
-			</a>
-			<a id="linkedinlink" href="https://linkedin.com/in/majramos"
-				aria-label="link to linkedin"
-				target="_blank"
-				rel="noopener noreferrer">
-				<Linkedin />
-			</a>
-			<a id="gitlablink" href="https://gitlab.com/majramos"
-				aria-label="link to gitlab"
-				target="_blank"
-				rel="noopener noreferrer">
-				<Gitlab />
-			</a>
-			<a id="githublink" href="https://github.com/Majramos"
-				aria-label="link to github"
-				target="_blank"
-				rel="noopener noreferrer">
-				<Github />
-			</a>
-			<a id="twitterlink" href="https://x.com/majramos"
-				aria-label="link to x/twitter"
-				target="_blank"
-				rel="noopener noreferrer">
-				<Twitter />
-			</a>
-		</div>
+        <div className="flex justify-center space-x-10 sm:space-x-20">
+            <a id="emaillink" href="mailto:marco@marcoramos.me" aria-label="link to email">
+                <Email />
+            </a>
+            <a id="linkedinlink" href="https://linkedin.com/in/majramos"
+                aria-label="link to linkedin"
+                target="_blank"
+                rel="noopener noreferrer">
+                <Linkedin />
+            </a>
+            <a id="gitlablink" href="https://gitlab.com/majramos"
+                aria-label="link to gitlab"
+                target="_blank"
+                rel="noopener noreferrer">
+                <Gitlab />
+            </a>
+            <a id="githublink" href="https://github.com/Majramos"
+                aria-label="link to github"
+                target="_blank"
+                rel="noopener noreferrer">
+                <Github />
+            </a>
+            <a id="twitterlink" href="https://x.com/majramos"
+                aria-label="link to x/twitter"
+                target="_blank"
+                rel="noopener noreferrer">
+                <Twitter />
+            </a>
+        </div>
     )
 }
