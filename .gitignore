@@ -48,3 +48,6 @@ cache
 
 # Geany editor project
 *.geany
+
+# Enviroment variables
+.env
