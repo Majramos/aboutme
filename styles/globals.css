@@ -50,6 +50,19 @@ html {
     font-family: 'mononoki', 'sans-serif';
     font-weight: normal;
     scroll-behavior: smooth !important;
+    --bg-color: var(--base3);
+    --border-color: var(-base00);
+    --fg-color: var(--base00);
+    --fill-color: var(--base01);
+    --tl-icon-bg-color: var(--yellow);
+}
+
+.dark {
+    --bg-color: var(--base03);
+    --border-color: var(-base0);
+    --fg-color: var(--base0);
+    --fill-color: var(--base1);
+    --tl-icon-bg-color: var(--cyan);
 }
 
 ::-webkit-scrollbar {
@@ -64,51 +77,40 @@ html {
     background: var(--base0);
 }
 
-body, svg, span, button, label, h1 {
-    background-color: var(--base3);
-    border-color: var(--base00);
-    color: var(--base00);
-    fill: var(--base01);
+body {
+    background-color: var(--bg-color);
+}
+
+body,
+svg,
+span,
+button,
+label,
+h1 {
+    border-color: var(--border-color);
+    color: var(--fg-color);
+    fill: var(--fill-color);
     transition-property: color, background-color, border-color, fill, transform, width, height;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-::selection, .project-tag {
-    background-color: var(--base00);
-    color: var(--base3);
+::selection,
+.project-tag {
+    background-color: var(--fg-color);
+    color: var(--bg-color);
 }
 
 button {
     border-width: 2px;
+    backdrop-filter: blur(2px);
 }
 
 button:hover {
-    background-color: var(--base00);
-    color: var(--base3);
-    fill: var(--base00);
-}
-
-body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
-    background-color: var(--base03);
-    border-color: var(--base0);
-    color: var(--base0);
-    fill: var(--base1);
-}
-
-.dark button:hover {
-    background-color: var(--base0);
-    color: var(--base03);
-    fill: var(--base0);
-}
-
-.dark ::selection, .dark .project-tag {
-    background-color: var(--base0);
-    color: var(--base03);
-}
-
-.dark svg {
-    fill: var(--base1);
+    background-color: var(--fg-color);
+    border-color: var(--fg-color);
+    color: var(--bg-color);
+    fill: var(--fg-color);
 }
 
 #emaillink svg {
@@ -135,15 +137,11 @@ body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
     fill: #000000 !important;
 }
 
-.timeline-icon, .timeline-icon svg {
-    background-color: var(--yellow);
-    fill: var(--base3);
+.timeline-icon,
+.timeline-icon svg {
+    background-color: var(--tl-icon-bg-color);
+    fill: var(--bg-color);
     transition-property: none;
-}
-
-.dark .timeline-icon, .dark .timeline-icon svg {
-    background-color: var(--cyan);
-    fill: var(--base03);
 }
 
 #linkshower {
@@ -195,7 +193,9 @@ body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
     }
 }
 
-#work-tab, #education-tab, #skills-tab {
+#work-tab,
+#education-tab,
+#skills-tab {
     border-color: transparent;
 }
 
@@ -208,13 +208,7 @@ body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
 #work:checked ~ .tabs #work-tab,
 #education:checked ~ .tabs #education-tab,
 #skills:checked ~ .tabs #skills-tab {
-    border-bottom: 2px solid var(--base01);
-}
-
-.dark #work:checked ~ .tabs #work-tab,
-.dark #education:checked ~ .tabs #education-tab,
-.dark #skills:checked ~ .tabs #skills-tab {
-    border-bottom: 2px solid var(--base1);
+    border-bottom: 2px solid var(--fill-color);
 }
 
 .text-container {
@@ -222,7 +216,6 @@ body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
-    backdrop-filter: opacity(0.75);
     backdrop-filter: blur(2px);
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     transition-property: box-shadow, backdrop-filter;
@@ -231,12 +224,14 @@ body.dark, .dark svg, .dark span, .dark button, .dark label, .dark h1 {
     user-select: none;
 }
 
-.text-container:hover, .text-container:focus {
+.text-container:hover,
+.text-container:focus {
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
 }
 
-.text-container h1, .text-container h2 {
+.text-container h1,
+.text-container h2 {
     font-weight: 700;
 }
 
