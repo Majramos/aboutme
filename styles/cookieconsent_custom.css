@@ -1,3 +1,5 @@
+@import "cookieconsent.css";
+
 #cc-main {
     --cc-font-family: 'mononoki', 'sans-serif';
     
@@ -48,7 +50,8 @@
     --cc-link-color: var(--yellow);
 }
 
-#cc-main .pm__close-btn>span>svg, #cc-main .pm__section-arrow>svg {
+#cc-main .pm__close-btn>span>svg,
+#cc-main .pm__section-arrow>svg {
     stroke: var(--base3) !important;
     background-color: transparent !important;
 }
@@ -95,6 +98,7 @@
     --cc-footer-bg: var(--base03);
 }
 
-.dark #cc-main .pm__close-btn>span>svg, .dark #cc-main .pm__section-arrow>svg {
+.dark #cc-main .pm__close-btn>span>svg,
+.dark #cc-main .pm__section-arrow>svg {
     stroke: var(--base03) !important;
 }

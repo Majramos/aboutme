@@ -1,7 +1,6 @@
 import Script from 'next/script';
 import { useEffect } from 'react';
 
-import '../styles/cookieconsent.css';
 import '../styles/cookieconsent_custom.css';
 import '../styles/globals.css';
 
@@ -23,6 +22,11 @@ export default function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
 
+        <Script
+            type="module"
+            src="/scripts/particles-config.js"
+            strategy="afterInteractive"
+        />
         {/*  Google Tag Manager */}
         <Script
             id="gtag-base"
