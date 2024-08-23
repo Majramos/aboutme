@@ -1,7 +1,10 @@
-import Head from 'next/head';
 import { useEffect } from 'react';
+import Head from 'next/head';
+import { usePathname } from 'next/navigation';
+
 import { ThemeSwitch } from '../components/Buttons';
 import Footer from '../components/Footer';
+
 
 export default function Layout({ title, children }) {
 
@@ -11,6 +14,9 @@ export default function Layout({ title, children }) {
     }, []);
 
     const metaDescription = "Marco Ramos personal page, with work experience, education timeline, skills and projects. Marco is a data scientist with skills in data modeling and engineering."
+
+    const pageSlug = usePathname();
+    const pageURL = `${process.env.NEXT_PUBLIC_BASE_URL}${pageSlug}`;
 
     return (
         <>
@@ -40,14 +46,17 @@ export default function Layout({ title, children }) {
                 <meta name="twitter:url" content="https://marcoramos.me" />
                 <meta name="twitter:site" content="@majramos" />
 
-
+                <link rel='canonical' href={pageURL} />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="manifest" href="/site.webmanifest" />
+
+                <link rel="preload" as="font" href="/fonts/mononoki-Regular.woff2" type="font/woff2" crossOrigin="anonymous" />
+                <link rel="preload" as="font" href="/fonts/mononoki-Bold.woff2" type="font/woff2" crossOrigin="anonymous" />
             </Head>
             <main className="container mx-auto min-h-screen">
-                {children}
+                { children }
             </main>
             <Footer />
             <div className="fixed bottom-4 right-4 m-2">

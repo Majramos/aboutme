@@ -26,9 +26,7 @@ function _buildCvSection( job ) {
     return (
         <li key={job.id}>
             <div className="flex-start flex items-center pt-3">
-                <div className="-ml-[10px] flex mr-1 h-[20px] w-[20px] \
-                                rounded-full items-center \
-                                justify-center timeline-icon">
+                <div className="-ml-[10px] flex mr-1 h-[20px] w-[20px] rounded-full items-center justify-center timeline-icon">
                     { job.type === 'work' ? <_work /> : <_school /> }
                 </div>
                 <p className="text-xs sm:text-sm italic">
@@ -71,10 +69,7 @@ function CvSection( { props, tab } ) {
 function SkillsSection( { props, tab } ) {
 
     const skills = props.cvdata.skills;
-
-    const levelsbase = "project-tag inline-block rounded-full \
-                        font-semibold m-2.5 \
-                        hover:scale-110 ";
+    const levelsbase = "project-tag inline-block rounded-full font-semibold m-2.5 hover:scale-110";
 
     const levels = {
         1: levelsbase+"py-1 px-4 text-sm", // being developed
@@ -124,9 +119,7 @@ export function TabButtonWrapper() {
 
 export function TabWrapper( { props }) {
 
-    const tabs_class = "inline-block text-center text-sm sm:text-base select-none \
-                        cursor-pointer grow py-2.5 mx-3 border-b-2 border-transparent \
-                        backdrop-blur-sm backdrop-opacity-25"
+    const tabs_class = "inline-block text-center text-sm sm:text-base select-none cursor-pointer grow py-2.5 mx-3 border-b-2 backdrop-blur-sm backdrop-opacity-25"
 
     const tabs_sections = Object.entries(tabsButton).map( ([tab, Section]) => {
         return (

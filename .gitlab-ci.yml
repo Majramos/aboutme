@@ -20,6 +20,8 @@ build:
     - npx next telemetry disable
     - npm run build
     - node cv/create_pdf.mjs
+    - cp public/sitemap.xml build/sitemap.xml
+    - cp public/robots.txt build/robots.txt
   artifacts:
     paths:
       - build

@@ -23,12 +23,11 @@ export async function getStaticProps() {
 
 
 function Name({ children }) {
-    const classes = 'text-5xl sm:text-8xl font-bold hover:scale-x-[-1]'
     return (
-        <div className="flex mx-3">
+        <div className="flex mx-3 font-bold text-5xl sm:text-8xl">
             {
                 children.toString().trim().split('').map(
-                    (l, i) => <h1 key={l+i} className={ classes }>{l}</h1>
+                    (l, i) => <h1 key={l+i} className="hover:scale-x-[-1]">{l}</h1>
                 )
             }
         </div>

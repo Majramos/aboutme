@@ -53,3 +53,11 @@ node cv/create_pdf.mjs
 ### Color Scheme
 **solarized** by Ethan Schoonover_
 - https://ethanschoonover.com/solarized/
+
+### Cookie Consent Banner
+**CookieConsent v3**
+- https://cookieconsent.orestbida.com/
+
+### Floating particles
+**particles.js** by marcbruederlin
+- https://marcbruederlin.github.io/particles.js/

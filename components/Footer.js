@@ -9,7 +9,7 @@ export default function Footer() {
                         <Link href="/privacy-policy" className="hover:underline">Privacy Policy</Link>
                     </li>
                     <li className="mx-4">
-                        <Link href="/cokiee-policy" className="hover:underline">Cookie Policy</Link>
+                        <Link href="/cookie-policy" className="hover:underline">Cookie Policy</Link>
                     </li>
                 </ul>
                 <span className="flex justify-center my-3 mx-4">

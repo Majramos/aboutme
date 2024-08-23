@@ -1,0 +1,17 @@
+<!-- public/sitemap.xml -->
+<xml version="1.0" encoding="UTF-8">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://marcoramos.me/</loc>
+    </url>
+    <url>
+        <loc>https://marcoramos.me/privacy-policy</loc>
+    </url>
+    <url>
+        <loc>https://marcoramos.me/cokiee-policy</loc>
+    </url>
+    <url>
+        <loc>https://marcoramos.me/marco_ramos_cv.pdf</loc>
+    </url>
+</urlset>
+</xml>
