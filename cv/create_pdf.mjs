@@ -59,55 +59,73 @@ let contactHeight = 25
 pdf.setFontSize(30)
     .setFont(fontFamily, "bold")
     .setTextColor(darkColor)
-    .text(cvdata.full_name, pageWidth/2, 17.5, {"align": "center"})
+    .text(
+        cvdata.full_name,
+        pageWidth/2,
+        17.5,
+        {"align": "center"}
+    )
     .setFontSize(10)
     .setFont(fontFamily, "italic")
-    // .text(cvdata.ocupation, pageWidth/2, 25, {"align": "center"})
-    // ((210-20)/4)/2+10
-    .text(cvdata.email.secondary, firstContact, contactHeight, {"align": "center"})
+    .text(
+        cvdata.email.secondary,
+        firstContact,
+        contactHeight,
+        {"align": "center"}
+    )
 
 let socialPosition = firstContact + contactSpacing
 cvdata.socials.map((social, index) => {
     if ( index >= 1) { index = 1 }
 
     pdf.setFontSize(10)
-        .setFont(fontFamily, "italic")
-        .textWithLink(social.name, socialPosition, contactHeight,
-            {"align": "center", "url": social.link}
+        .setFont(
+            fontFamily,
+            "italic"
+        )
+        .textWithLink(
+            social.name,
+            socialPosition,
+            contactHeight,
+            {
+                "align": "center",
+                "url": social.link
+            }
         );
     socialPosition = socialPosition + contactSpacing
 });
-
-
-let verticalSpacerX = 60;
 
 pdf.setDrawColor(lineColor)
     .setLineWidth(0.5)
     // horizontal line
     .line(10, 30, pageWidth-10, 30)
-    // vertical line
-    .line(verticalSpacerX, 37, verticalSpacerX, 280);
 
-let startBodyHeight = 38;
-let rightRowHeight = startBodyHeight;
-let leftRowHeight = startBodyHeight;
+let currentHeight = 38;
+const textWidth = pageWidth-sideMargin-1
+const rightSideEnd = pageWidth-10;
 
 /*
  * Introduction Section
  */
-let leftSideWidth = 45
+
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
     .text(
         "Profile",
         10,
-        leftRowHeight,
+        currentHeight,
         {"align": "left"}
     )
     .setFontSize(10)
     .setFont(fontFamily, "normal")
-    .text(cvdata.introduction[0], 12, leftRowHeight = leftRowHeight+6,
-        {"align": "left", "maxWidth": leftSideWidth}
+    .text(
+        cvdata.introduction[0],
+        10,
+        currentHeight = currentHeight+7,
+        {
+            "align": "justify",
+            "maxWidth": textWidth
+        }
     );
 
 // number of rows * font size in pt * convertion pt to mm
@@ -115,129 +133,98 @@ function getTextHeight( text, width ) {
     return pdf.splitTextToSize(text, width).length*(10*(0.4));
 };
 
-let profileTextHeight = getTextHeight(cvdata.introduction[0], leftSideWidth);
-
-/*
- * Skills Section
- */
-pdf.setFontSize(14)
-    .setFont(fontFamily, "bold")
-    .text(
-        "Skills",
-        10,
-        leftRowHeight = leftRowHeight+profileTextHeight+6,
-        {"align": "left"}
-    );
-
-leftRowHeight = leftRowHeight+6
-cvdata.skills.map((skill, index) => {
-    if ( index >= 1) { index = 1 }
-    leftRowHeight = leftRowHeight+(index*7);
-
-    pdf.setFontSize(10)
-        .setFont(fontFamily, "normal")
-        .text(
-            skill.name,
-            12,
-            leftRowHeight,
-            {"align": "left"}
-        )
-        // .setDrawColor("#e4e4e4")
-        // .setLineWidth(1)
-        // .line(
-            // 10,
-            // leftRowHeight+2,
-            // 10+leftSideWidth,
-            // leftRowHeight+2
-        // )
-        // .setDrawColor("#585858")
-        // .setLineWidth(1)
-        // .line(
-            // 10,
-            // leftRowHeight+2,
-            // 10+(9*skill.level),
-            // leftRowHeight+2
-        // );
-});
+let profileTextHeight = getTextHeight(cvdata.introduction[0], textWidth);
 
 /*
  * Work Section
- */ 
-let rightSideStart = verticalSpacerX+5;
-let rightSideEnd = pageWidth-10;
+ */
+
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
     .text(
-        "Work",
-        rightSideStart,
-        rightRowHeight = rightRowHeight,
+        "Experience",
+        10,
+        currentHeight = currentHeight+profileTextHeight+6,
         {"align": "left"}
     );
+    
+pdf.setLineWidth(0.1).line(41, currentHeight-1.5, pageWidth-10, currentHeight-1.5)
 
-rightRowHeight = rightRowHeight+7
+currentHeight = currentHeight+7 // space to first work
 
 cvdata.timeline
     .filter(item => item.type === "work" )
     .map((time, index) => {
-        if ( index >= 1) { index = 1 }
-        rightRowHeight = rightRowHeight+(index*3);
+        if ( index >= 1) {
+            currentHeight = currentHeight+1;
+        }
 
-        pdf.setFontSize(12)
+        // currentHeight = currentHeight+(index*2);
+
+        pdf.setFontSize(11)
             .setFont(fontFamily, "bold")
             .text(
                 time.title,
-                rightSideStart+2,
-                rightRowHeight,
+                10,
+                currentHeight,
                 {"align": "left"}
             )
             .setFontSize(10)
             .setFont(fontFamily, 'italic')
             .text(
                 time.start+" - "+(time.end || "present"),
-                rightSideStart+2,
-                rightRowHeight+6,
+                10,
+                currentHeight = currentHeight+6,
                 {"align": "left"}
             )
             .text(
                 time.where,
                 rightSideEnd,
-                rightRowHeight+6,
+                currentHeight,
                 {"align": "right"}
             )
             .setFont(fontFamily, 'normal');
 
         // space between date and description
-        rightRowHeight= rightRowHeight+12;
+        currentHeight= currentHeight+6;
         time.description.map((desc, subindex) => {
             pdf.setFontSize(10)
                 .text(
                     "•",
-                    rightSideStart+2,
-                    rightRowHeight, {"align": "left"}
+                    10,
+                    currentHeight,
+                    {"align": "left"}
                 )
                 .text(
                     desc,
-                    rightSideStart+4,
-                    rightRowHeight,
-                    {"align": "justify", "maxWidth": 130}
+                    12,
+                    currentHeight,
+                    {
+                        "align": "justify",
+                        "maxWidth": textWidth-2
+                    }
                 );
             // space between descriptions
-            rightRowHeight = rightRowHeight+3+getTextHeight(desc, 130);
+            currentHeight = currentHeight+3+getTextHeight(desc, textWidth-2);
         });
     });
-
 
 /*
  * Education Section
  */
+
 pdf.setFontSize(14)
     .setFont(fontFamily, "bold")
     .text(
         "Education",
-        rightSideStart,
-        rightRowHeight = rightRowHeight+6,
+        10,
+        currentHeight = currentHeight+3,
         {"align": "left"}
     );
+    
+pdf.setLineWidth(0.1).line(39, currentHeight-1.5, pageWidth-10, currentHeight-1.5)
+    
+// currentHeight = currentHeight+7
 
 cvdata.timeline
     .filter(item => item.type === "education" )
@@ -247,30 +234,63 @@ cvdata.timeline
             .setFont(fontFamily, "bold")
             .text(
                 time.title,
-                rightSideStart+2,
-                rightRowHeight = rightRowHeight+6,
+                10,
+                currentHeight = currentHeight+6,
                 {"align": "left"}
             )
             .setFontSize(10)
             .setFont(fontFamily, 'italic')
             .text(
                 time.end,
-                rightSideStart+2,
-                rightRowHeight = rightRowHeight+5,
+                10,
+                currentHeight = currentHeight+6,
                 {"align": "left"}
             )
             .text(
                 time.where,
                 rightSideEnd,
-                rightRowHeight,
+                currentHeight,
                 {"align": "right"}
              )
             .setFont(fontFamily, 'normal');
     });
+ 
+/*
+ * Skills Section
+ */
+ 
+pdf.setFontSize(14)
+    .setFont(fontFamily, "bold")
+    .text(
+        "Skills",
+        10,
+        currentHeight = currentHeight+9,
+        {"align": "left"}
+    );
+    
+pdf.setLineWidth(0.1).line(28, currentHeight-1.5, pageWidth-10, currentHeight-1.5)
+
+let skillstring = cvdata.skills[0].name
+cvdata.skills.slice(1).map((skill, index) => {
+    skillstring = skillstring+", "+skill.name
+});
+
+pdf.setFontSize(10)
+    .setFont(fontFamily, "normal")
+    .text(
+        skillstring,
+        10,
+        currentHeight+7,
+        {
+            "align": "justify",
+            "maxWidth": textWidth-2
+        }
+    )     
 
 /*
  * Footer
  */
+
 const footerText = cvdata.full_name+
     " ".repeat(5)+
     cvdata.personalpage.name+
@@ -285,7 +305,10 @@ pdf.setFontSize(8)
         footerText,
         (pageWidth / 2),
         pageHeight-5,
-        {"align": "center", "url": cvdata.personalpage.link}
+        {
+            "align": "center",
+            "url": cvdata.personalpage.link
+        }
     );
 
 /*
