@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+
 export default function Footer() {
     return (
         <footer className="container mx-auto my-6 text-center text-xs sm:text-sm">
