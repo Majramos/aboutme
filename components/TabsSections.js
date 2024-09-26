@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { TabButtons } from '../components/Buttons';
 
 
 function _work() {
