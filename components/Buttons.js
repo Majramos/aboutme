@@ -11,6 +11,7 @@ export function ButtonBase({ id, extra="px-4 py-2", children }) {
     )
 }
 
+
 export function ThemeSwitch() {
     return (
         <ButtonBase id="theme-toggle" extra="p-2 flex justify-center">
@@ -27,22 +28,33 @@ export function ThemeSwitch() {
     )
 }
 
-export function GoHome() {
+
+export function HomeButtons() {
     return (
-        <Link href="/">
-            <ButtonBase id="go-home" extra="w-36 h-10">
-                Go Back Home
-            </ButtonBase>
-        </Link>
+        <>
+            <Link id="aboutme-button" href="#target-cv">
+                <ButtonBase extra="w-28 sm:w-32 h-10 sm:h-12 mx-4"> About Me </ButtonBase>
+            </Link>
+            <Link id="download-cv-button" href="/marco_ramos_cv.pdf" target="_blank" rel="noopener noreferrer">
+                <ButtonBase extra="w-28 sm:w-32 h-10 sm:h-12 mx-4"> Download CV </ButtonBase>
+            </Link>
+        </>
     )
 }
 
-export function TabButtons({ id, href, children }) {
-    return (
-        <Link id={ id } href={ href }>
-            <ButtonBase extra="w-20 sm:w-28 h-10 mx-2">
-                { children }
-            </ButtonBase>
-        </Link>
-    )
+
+export function SelectButton({ type }) {
+    if (type == "/") {
+        return (
+            <Link id="download-cv-button2" href="/marco_ramos_cv.pdf" target="_blank" rel="noopener noreferrer">
+                <ButtonBase extra="w-32 h-8"> Download CV </ButtonBase>
+            </Link>
+        )
+    } else {
+        return (
+            <Link href="/">
+                <ButtonBase id="go-home" extra="w-32 h-8"> Go Back </ButtonBase>
+            </Link>
+        )
+    }
 }
