@@ -1,11 +1,10 @@
-import Link from 'next/link';
 import fsPromises from 'fs/promises';
 import path from 'path';
 
 import Layout from '../components/Layout';
 import Socials from '../components/Socials';
-import { ButtonBase } from '../components/Buttons';
-import { TabWrapper, TabButtonWrapper } from '../components/TabsSections';
+import { HomeButtons } from '../components/Buttons';
+import { TabWrapper } from '../components/TabsSections';
 
 
 export async function getStaticProps() {
@@ -50,7 +49,7 @@ export default function Home( props ) {
                     <Socials />
                 </div>
                 <div className="flex justify-center my-5">
-                    <TabButtonWrapper />
+                    <HomeButtons />
                 </div>
                 <div className="h-4">
                     <p id="linkshower"></p>
@@ -64,11 +63,6 @@ export default function Home( props ) {
                         </p>
                         )
                     )}
-                </div>
-                <div className="mt-5 flex justify-center">
-                    <Link id="download-cv-button" href="/marco_ramos_cv.pdf" target="_blank" rel="noopener noreferrer">
-                        <ButtonBase> Download CV </ButtonBase>
-                    </Link>
                 </div>
             </section>
             <section id="tab-section" className="m-10">
