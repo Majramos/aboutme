@@ -58,6 +58,17 @@
             ]
         },
         {
+            "id": "school5",
+            "type": "education",
+            "title": "Data Engineering Professional Certificate",
+            "where": "IBM",
+            "start": null,
+            "end": "September 2024",
+            "description": [
+                "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
+            ]
+        },
+        {
             "id": "school4",
             "type": "education",
             "title": "Data Science Professional Certificate",
@@ -105,26 +116,28 @@
     ],
     "skills" : [
         {"id": 1, "name": "ArcGIS", "level": 3},
-        {"id": 2, "name": "bash / shell", "level": 2},
-        {"id": 3, "name": "business intelligence", "level": 4},
-        {"id": 4, "name": "data science", "level": 5},
-        {"id": 5, "name": "data engineering", "level": 4},
-        {"id": 6, "name": "Dax", "level": 3},
-        {"id": 7, "name": "docker", "level": 3},
-        {"id": 8, "name": "gis", "level": 3},
-        {"id": 9, "name": "git", "level": 4},
-        {"id": 10, "name": "gitlab / github", "level": 3},
-        {"id": 11, "name": "html / css", "level": 2},
-        {"id": 12, "name": "javascript", "level": 1},
-        {"id": 13, "name": "machine learning", "level": 5},
-        {"id": 14, "name": "pandas", "level": 5},
-        {"id": 15, "name": "powershell", "level": 2},
-        {"id": 16, "name": "Power BI", "level": 4},
-        {"id": 17, "name": "Power Query", "level": 4},
-        {"id": 18, "name": "Python", "level": 5},
-        {"id": 19, "name": "R", "level": 3},
-        {"id": 20, "name": "Scikit-Learn", "level": 4},
-        {"id": 21, "name": "spark", "level": 4},
-        {"id": 22, "name": "SQL", "level": 4}
+        {"id": 2, "name": "Bash", "level": 2},
+        {"id": 3, "name": "Business Intelligence", "level": 4},
+        {"id": 4, "name": "CSS", "level": 2},
+        {"id": 5, "name": "Data Science", "level": 5},
+        {"id": 6, "name": "Data Engineering", "level": 5},
+        {"id": 7, "name": "Dax", "level": 3},
+        {"id": 8, "name": "Docker", "level": 3},
+        {"id": 9, "name": "GIS", "level": 3},
+        {"id": 10, "name": "Git", "level": 4},
+        {"id": 11, "name": "Gitlab|Github", "level": 3},
+        {"id": 12, "name": "HTML", "level": 2},
+        {"id": 13, "name": "Javascript", "level": 1},
+        {"id": 14, "name": "Machine Learning", "level": 5},
+        {"id": 15, "name": "Pandas", "level": 5},
+        {"id": 16, "name": "Powershell", "level": 2},
+        {"id": 17, "name": "Power BI", "level": 4},
+        {"id": 18, "name": "Power Query", "level": 4},
+        {"id": 19, "name": "Python", "level": 5},
+        {"id": 20, "name": "R", "level": 3},
+        {"id": 21, "name": "Scikit-Learn", "level": 4},
+        {"id": 22, "name": "Shell", "level": 2},
+        {"id": 23, "name": "Spark", "level": 4},
+        {"id": 24, "name": "SQL", "level": 4}
     ]
 }
