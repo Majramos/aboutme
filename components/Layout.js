@@ -4,9 +4,13 @@ import { usePathname } from 'next/navigation';
 
 import { ThemeSwitch } from '../components/Buttons';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 
 export default function Layout({ title, children }) {
+
+    const pageSlug = usePathname();
+    const pageURL = `${process.env.NEXT_PUBLIC_BASE_URL}${pageSlug}`;
 
     useEffect(() => {
         document.getElementById('theme-toggle').addEventListener('click', changeTheme);
@@ -14,9 +18,6 @@ export default function Layout({ title, children }) {
     }, []);
 
     const metaDescription = "Marco Ramos personal page, with work experience, education timeline, skills and projects. Marco is a data scientist with skills in data modeling and engineering."
-
-    const pageSlug = usePathname();
-    const pageURL = `${process.env.NEXT_PUBLIC_BASE_URL}${pageSlug}`;
 
     return (
         <>
@@ -55,6 +56,7 @@ export default function Layout({ title, children }) {
                 <link rel="preload" as="font" href="/fonts/mononoki-Regular.woff2" type="font/woff2" crossOrigin="anonymous" />
                 <link rel="preload" as="font" href="/fonts/mononoki-Bold.woff2" type="font/woff2" crossOrigin="anonymous" />
             </Head>
+            <Navbar type={`${pageSlug}`}/>
             <main className="container mx-auto min-h-screen">
                 { children }
             </main>
