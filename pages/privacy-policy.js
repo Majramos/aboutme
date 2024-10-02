@@ -1,6 +1,7 @@
-import Layout from '../components/Layout';
-import { GoHome } from '../components/Buttons';
 import Link from 'next/link';
+
+import Layout from '../components/Layout';
+
 
 export default function PrivacyPolicy() {
     return (
@@ -129,9 +130,6 @@ export default function PrivacyPolicy() {
                     </div>
                 </div>
             </section>
-            <div className="flex justify-center space-x-2 py-6 m-10">
-                <GoHome />
-            </div>
         </Layout>
     )
 }

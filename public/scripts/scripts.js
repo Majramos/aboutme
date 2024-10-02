@@ -48,3 +48,25 @@ function showlink( link ) {
     linkshower.style.display = "inline-block";
     linkshower.textContent = link;
 }
+
+/*
+ * show navbar on scroll
+ */
+function DynamicNavBar() {
+    window.addEventListener("scroll", function() {
+
+        let _namePos = document.getElementById('big-name')
+
+        if (_namePos != null) {
+            var namePos = _namePos.getBoundingClientRect().bottom;
+            // console.log(namePos);
+            if (namePos >= 0) {
+                // user has scrolled up
+                document.getElementById("navbar").style.display = "none";
+            } else {
+                // user has scrolled down
+                document.getElementById("navbar").style.display = "block";
+            }
+        }
+    });
+}

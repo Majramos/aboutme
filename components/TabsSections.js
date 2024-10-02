@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { TabButtons } from '../components/Buttons';
 
 
 function _work() {
@@ -102,21 +101,6 @@ const tabsButton = {
 };
 
 
-export function TabButtonWrapper() {
-    return (
-        <>
-            { Object.keys(tabsButton).map(
-                tab => (
-                    <TabButtons key={ tab } id={ tab+"-button" }  href={ "#"+tab+"-tab" }>
-                        { tab.charAt(0).toUpperCase() + tab.slice(1) }
-                    </TabButtons>
-                ))
-            }
-        </>
-    )
-}
-
-
 export function TabWrapper( { props }) {
 
     const tabs_class = "inline-block text-center text-sm sm:text-base select-none cursor-pointer grow py-2.5 mx-3 border-b-2 backdrop-blur-sm backdrop-opacity-25"
@@ -131,21 +115,20 @@ export function TabWrapper( { props }) {
     });
 
     useEffect(() => {
-
         document.getElementById("work").click();
-
-        Object.keys(tabsButton).forEach(tab => {
-            document.getElementById(tab+"-button").addEventListener('click', (e) => {
-                document.getElementById(tab).click();
-            });
-        });
-
     }, []);
 
     return (
         <div className="flex flex-col">
             { Object.keys(tabsButton).map( tab => (
-                    <input className="hidden" key={ tab } id={ tab } name="group" type="radio" onChange={()=>{}} />
+                    <input
+                        className="hidden"
+                        key={ tab }
+                        id={ tab }
+                        name="group"
+                        type="radio"
+                        onChange={()=>{}}
+                    />
             )) }
 
             <div className="tabs flex justify-around shadow-lg rounded-2xl backdrop-opacity-75 backdrop-blur-sm">

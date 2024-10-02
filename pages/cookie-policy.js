@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-import { GoHome } from '../components/Buttons';
+
 
 export default function CokieePolicy() {
     return (
@@ -68,9 +68,6 @@ export default function CokieePolicy() {
                     </div>
                 </div>
             </section>
-            <div className="flex justify-center space-x-2 py-6 m-10">
-                <GoHome />
-            </div>
         </Layout>
     )
 }
