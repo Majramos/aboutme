@@ -55,7 +55,7 @@ export default function Socials() {
     useEffect(() => {
 
         const sites = {
-            'marco@marcoramos.me': document.getElementById('emaillink'),
+            'contactme@marcoramos.me': document.getElementById('emaillink'),
             'linkedin.com/in/majramos': document.getElementById('linkedinlink'),
             'gitlab.com/majramos': document.getElementById('gitlablink'),
             'github.com/Majramos': document.getElementById('githublink'),
@@ -73,7 +73,8 @@ export default function Socials() {
 
     return (
         <div className="flex justify-center space-x-10 sm:space-x-20">
-            <a id="emaillink" href="mailto:marco@marcoramos.me" aria-label="link to email">
+            <a id="emaillink" href="mailto:contactme@marcoramos.me"
+                aria-label="link to email">
                 <Email />
             </a>
             <a id="linkedinlink" href="https://linkedin.com/in/majramos"
