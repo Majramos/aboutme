@@ -52,8 +52,8 @@ const guide_lines = () => {
  * Header Section
  */
 let sideMargin = 20
-let contactSpacing = (pageWidth - (sideMargin * 2)) / 4
-let firstContact = sideMargin + (contactSpacing / 2)
+let contactSpacing = (pageWidth - ((sideMargin-10) * 2)) / 4
+let firstContact = (sideMargin-10) + (contactSpacing / 2)
 let contactHeight = 25
 
 pdf.setFontSize(30)
