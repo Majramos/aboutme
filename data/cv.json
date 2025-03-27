@@ -1,143 +1,141 @@
 {
-    "last_update": "2024-11-11",
-    "first_name": "Marco",
-    "last_name": "Ramos",
-    "full_name": "Marco Ramos",
-    "email": {
-        "primary": "marco@marcoramos.me",
-        "secondary": "contactme@marcoramos.me"
+  "last_update": "2024-11-11",
+  "first_name": "Marco",
+  "last_name": "Ramos",
+  "full_name": "Marco Ramos",
+  "email": {
+    "primary": "marco@marcoramos.me",
+    "secondary": "contactme@marcoramos.me"
+  },
+  "personalpage": {
+    "name": "marcoramos.me",
+    "link": "https://marcoramos.me"
+  },
+  "socials": [
+    {
+      "name": "linkedin.com/in/majramos",
+      "link": "https://linkedin.com/in/majramos"
     },
-    "personalpage": {
-        "name": "marcoramos.me",
-        "link": "https://marcoramos.me"
+    {
+      "name": "gitlab.com/majramos",
+      "link": "https://gitlab.com/majramos"
     },
-    "socials": [
-        {
-            "name": "linkedin.com/in/majramos",
-            "link": "https://linkedin.com/in/majramos"
-        },
-        {
-            "name": "gitlab.com/majramos",
-            "link": "https://gitlab.com/majramos"
-        },
-        {
-            "name": "github.com/Majramos",
-            "link": "https://github.com/Majramos"
-        }
-    ],
-    "introduction": [
-        "I'm resourceful professional with a natural attitude to developing solutions for complex problems trough selection, interpretation and manipulation of the available data bringing high-quality business intelligence solutions to businesses seeking higher efficiency",
-        "Currently working as a data scientist / digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making processes"
-    ],
-    "timeline": [
-        {
-            "id": "work2",
-            "type": "work",
-            "title": "Data Scientist / Engineer",
-            "where": "Comercial Business Unit @ Galp",
-            "start": "July 2020",
-            "end": null,
-            "description": [
-                "Data Science: Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior and enhance the precision of predictive models.",
-                "Data Engineering: Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Utilized knowledge of database schema to architect efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
-                "Data Analysis & Business Intelligence: Utilized BI tools and data analysis to develop, test, and validate hypotheses, providing actionable insights and recommendations for the business. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
-            ]
-        },
-        {
-            "id": "work1",
-            "type": "work",
-            "title": "Geoscience Specialist",
-            "where": "Upstream Business Unit @ Galp",
-            "start": "April 2017",
-            "end": "July 2020",
-            "description": [
-                "Database Management: Organize and maintain corporate geological and GIS databases, ensuring data integrity and quality.",
-                "Decision Support & Modeling: Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines.",
-                "Reservoir Studies: Plan and execute comprehensive reservoir studies, incorporating diverse data types, performing seismic interpretation, and constructing complex structural and petrophysical models.",
-                "Project Support: Provide geoscience expertise for the Mozambique Rovuma LNG project and Angola Block 14 development projects, overseeing drilling, completion, and workover operations in infill campaigns."
-            ]
-        },
-        {
-            "id": "school5",
-            "type": "education",
-            "title": "Data Engineering Professional Certificate",
-            "where": "IBM",
-            "start": null,
-            "end": "September 2024",
-            "description": [
-                "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
-            ]
-        },
-        {
-            "id": "school4",
-            "type": "education",
-            "title": "Data Science Professional Certificate",
-            "where": "IBM",
-            "start": null,
-            "end": "July 2024",
-            "description": [
-                "https://coursera.org/verify/professional-cert/2RDWY369KZUB"
-            ]
-        },
-        {
-            "id": "school3",
-            "type": "education",
-            "title": "Master of Science - Petroleum Engineering",
-            "where": "Heriot-Watt University",
-            "start": "March 2016",
-            "end": "March 2017",
-            "description": [
-                "Master's degree in Petroleum Engineering sponsored by GALP."
-            ]
-        },
-        {
-            "id": "school2",
-            "type": "education",
-            "title": "Master of Science - Geoscience",
-            "where": "University of Coimbra",
-            "start": "September 2013",
-            "end": "June 2015",
-            "description": [
-                "Master's degree in Geoscience specializing in the area of expertise of geological resources.",
-                "Dissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)."
-            ]
-        },
-        {
-            "id": "school1",
-            "type": "education",
-            "title": "Bachelor of Science - Geology",
-            "where": "University of Coimbra",
-            "start": "September 2010",
-            "end": "June 2013",
-            "description": [
-                "Bachelor's degree in Geology."
-            ]
-        }
-    ],
-    "skills" : [
-        {"id": 1, "name": "ArcGIS", "level": 3},
-        {"id": 2, "name": "Bash", "level": 2},
-        {"id": 3, "name": "Business Intelligence", "level": 4},
-        {"id": 4, "name": "CSS", "level": 2},
-        {"id": 5, "name": "Data Science", "level": 5},
-        {"id": 6, "name": "Data Engineering", "level": 5},
-        {"id": 7, "name": "Dax", "level": 3},
-        {"id": 8, "name": "Docker", "level": 3},
-        {"id": 9, "name": "GIS", "level": 3},
-        {"id": 10, "name": "Git", "level": 4},
-        {"id": 11, "name": "Gitlab|Github", "level": 3},
-        {"id": 12, "name": "HTML", "level": 2},
-        {"id": 13, "name": "Javascript", "level": 1},
-        {"id": 14, "name": "Machine Learning", "level": 5},
-        {"id": 15, "name": "Pandas", "level": 5},
-        {"id": 16, "name": "Powershell", "level": 2},
-        {"id": 17, "name": "Power BI", "level": 4},
-        {"id": 18, "name": "Power Query", "level": 4},
-        {"id": 19, "name": "Python", "level": 5},
-        {"id": 20, "name": "R", "level": 3},
-        {"id": 21, "name": "Scikit-Learn", "level": 4},
-        {"id": 22, "name": "Shell", "level": 2},
-        {"id": 23, "name": "Spark", "level": 4},
-        {"id": 24, "name": "SQL", "level": 4}
-    ]
+    {
+      "name": "github.com/Majramos",
+      "link": "https://github.com/Majramos"
+    }
+  ],
+  "introduction": [
+    "I'm resourceful professional with a natural attitude to developing solutions for complex problems trough selection, interpretation and manipulation of the available data bringing high-quality business intelligence solutions to businesses seeking higher efficiency",
+    "Currently working as a data scientist / digital transformation specialist by developing and implementing data analyses, data collection systems and other strategies to provide the company with ideas that contribute to the decision-making processes"
+  ],
+  "timeline": [
+    {
+      "id": "work2",
+      "type": "work",
+      "title": "Data Scientist / Engineer",
+      "where": "Comercial Business Unit @ Galp",
+      "start": "July 2020",
+      "end": "February 2025",
+      "description": [
+        "Data Science: Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior and enhance the precision of predictive models.",
+        "Data Engineering: Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Utilized knowledge of database schema to architect efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
+        "Data Analysis & Business Intelligence: Utilized BI tools and data analysis to develop, test, and validate hypotheses, providing actionable insights and recommendations for the business. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
+      ]
+    },
+    {
+      "id": "work1",
+      "type": "work",
+      "title": "Geoscience Specialist",
+      "where": "Upstream Business Unit @ Galp",
+      "start": "April 2017",
+      "end": "July 2020",
+      "description": [
+        "Database Management: Organize and maintain corporate geological and GIS databases, ensuring data integrity and quality.",
+        "Decision Support & Modeling: Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines.",
+        "Reservoir Studies: Plan and execute comprehensive reservoir studies, incorporating diverse data types, performing seismic interpretation, and constructing complex structural and petrophysical models.",
+        "Project Support: Provide geoscience expertise for the Mozambique Rovuma LNG project and Angola Block 14 development projects, overseeing drilling, completion, and workover operations in infill campaigns."
+      ]
+    },
+    {
+      "id": "school5",
+      "type": "education",
+      "title": "Data Engineering Professional Certificate",
+      "where": "IBM",
+      "start": null,
+      "end": "September 2024",
+      "description": [
+        "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
+      ]
+    },
+    {
+      "id": "school4",
+      "type": "education",
+      "title": "Data Science Professional Certificate",
+      "where": "IBM",
+      "start": null,
+      "end": "July 2024",
+      "description": [
+        "https://coursera.org/verify/professional-cert/2RDWY369KZUB"
+      ]
+    },
+    {
+      "id": "school3",
+      "type": "education",
+      "title": "Master of Science - Petroleum Engineering",
+      "where": "Heriot-Watt University",
+      "start": "March 2016",
+      "end": "March 2017",
+      "description": [
+        "Master's degree in Petroleum Engineering sponsored by GALP."
+      ]
+    },
+    {
+      "id": "school2",
+      "type": "education",
+      "title": "Master of Science - Geoscience",
+      "where": "University of Coimbra",
+      "start": "September 2013",
+      "end": "June 2015",
+      "description": [
+        "Master's degree in Geoscience specializing in the area of expertise of geological resources.",
+        "Dissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)."
+      ]
+    },
+    {
+      "id": "school1",
+      "type": "education",
+      "title": "Bachelor of Science - Geology",
+      "where": "University of Coimbra",
+      "start": "September 2010",
+      "end": "June 2013",
+      "description": ["Bachelor's degree in Geology."]
+    }
+  ],
+  "skills": [
+    { "id": 1, "name": "ArcGIS", "level": 3 },
+    { "id": 2, "name": "Bash", "level": 2 },
+    { "id": 3, "name": "Business Intelligence", "level": 4 },
+    { "id": 4, "name": "CSS", "level": 2 },
+    { "id": 5, "name": "Data Science", "level": 5 },
+    { "id": 6, "name": "Data Engineering", "level": 5 },
+    { "id": 7, "name": "Dax", "level": 3 },
+    { "id": 8, "name": "Docker", "level": 3 },
+    { "id": 9, "name": "GIS", "level": 3 },
+    { "id": 10, "name": "Git", "level": 4 },
+    { "id": 11, "name": "Gitlab|Github", "level": 3 },
+    { "id": 12, "name": "HTML", "level": 2 },
+    { "id": 13, "name": "Javascript", "level": 1 },
+    { "id": 14, "name": "Machine Learning", "level": 5 },
+    { "id": 15, "name": "Pandas", "level": 5 },
+    { "id": 16, "name": "Powershell", "level": 2 },
+    { "id": 17, "name": "Power BI", "level": 4 },
+    { "id": 18, "name": "Power Query", "level": 4 },
+    { "id": 19, "name": "Python", "level": 5 },
+    { "id": 20, "name": "R", "level": 3 },
+    { "id": 21, "name": "Scikit-Learn", "level": 4 },
+    { "id": 22, "name": "Shell", "level": 2 },
+    { "id": 23, "name": "Spark", "level": 4 },
+    { "id": 24, "name": "SQL", "level": 4 }
+  ]
 }
