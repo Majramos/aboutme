@@ -31,16 +31,29 @@
   ],
   "timeline": [
     {
+      "id": "work3",
+      "type": "work",
+      "title": "Data Analyst",
+      "where": "Acquiring Department @ Revolut",
+      "start": "March 2025",
+      "end": null,
+      "include": true,
+      "description": [
+        "Working in Acquiring, specializing in the development and optimization of fraud controls targeting merchant activity. My role involves leveraging advanced data analytics to identify patterns, mitigate risks, and ensure the security of merchant activity. Develop robust BI and reporting solutions using Google Looker, providing actionable insights into fraud trends and control effectiveness. Develop of compliance and fraud bots utilizing Large Language Models, crafting custom prompts to enhance automated detection and response capabilities."
+      ]
+    },
+    {
       "id": "work2",
       "type": "work",
       "title": "Data Scientist / Engineer",
       "where": "Comercial Business Unit @ Galp",
       "start": "July 2020",
       "end": "February 2025",
+      "include": true,
       "description": [
-        "Data Science: Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior and enhance the precision of predictive models.",
-        "Data Engineering: Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Utilized knowledge of database schema to architect efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
-        "Data Analysis & Business Intelligence: Utilized BI tools and data analysis to develop, test, and validate hypotheses, providing actionable insights and recommendations for the business. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
+        "Data Science: Conducted customer behavior studies to gain insights into retail customers' purchasing patterns. Developed segmentation models to identify optimal next actions. Developed forecast models to predict trends and patterns, ensuring accurate and reliable consumption forecasts. Utilized advanced data mining techniques, such as basket analysis, to understand customer purchasing behavior.",
+        "Data Engineering: Led MLOps development from initial design to successful production deployment, streamlining workflows and improving operational efficiency. Built efficient and scalable data models, ensuring optimal performance and data integrity. Additionally, built and maintained ETL pipelines, integrating data from various sources and ensuring high data quality through validation and cleansing. Optimized data querying and processing using SQL and Dremio’s capabilities, enhancing the overall efficiency of data workflows.",
+        "Data Analysis & Business Intelligence: Utilized BI tools and data analysis to provide actionable business insights and recommendations. Identify business needs and lead the creation of statistical reports and visualizations in Power BI, establishing data rules and KPIs. Implemented Power Automate to streamline workflows, significantly improving operational efficiency and productivity."
       ]
     },
     {
@@ -50,33 +63,24 @@
       "where": "Upstream Business Unit @ Galp",
       "start": "April 2017",
       "end": "July 2020",
+      "include": true,
       "description": [
         "Database Management: Organize and maintain corporate geological and GIS databases, ensuring data integrity and quality.",
-        "Decision Support & Modeling: Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines.",
-        "Reservoir Studies: Plan and execute comprehensive reservoir studies, incorporating diverse data types, performing seismic interpretation, and constructing complex structural and petrophysical models.",
-        "Project Support: Provide geoscience expertise for the Mozambique Rovuma LNG project and Angola Block 14 development projects, overseeing drilling, completion, and workover operations in infill campaigns."
-      ]
-    },
-    {
-      "id": "school5",
-      "type": "education",
-      "title": "Data Engineering Professional Certificate",
-      "where": "IBM",
-      "start": null,
-      "end": "September 2024",
-      "description": [
-        "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
+        "Decision Support & Modeling: Develop decision support packages, conduct value of information exercises, and implement optimized modeling, uncertainty, and sensitivity workflows with custom routines. Plan and execute comprehensive reservoir studies, performing seismic interpretation, and constructing complex structural and petrophysical models.",
+        "Project Support: Provide support for the Mozambique Rovuma LNG project and Angola Block 14 development projects."
       ]
     },
     {
       "id": "school4",
       "type": "education",
-      "title": "Data Science Professional Certificate",
+      "title": "Data Science & Data Engineering Professional Certificate",
       "where": "IBM",
       "start": null,
-      "end": "July 2024",
+      "end": "September 2024",
+      "include": true,
       "description": [
-        "https://coursera.org/verify/professional-cert/2RDWY369KZUB"
+        "https://coursera.org/verify/professional-cert/2RDWY369KZUB",
+        "https://coursera.org/verify/professional-cert/2VNWREMJ6YNK"
       ]
     },
     {
@@ -86,6 +90,7 @@
       "where": "Heriot-Watt University",
       "start": "March 2016",
       "end": "March 2017",
+      "include": true,
       "description": [
         "Master's degree in Petroleum Engineering sponsored by GALP."
       ]
@@ -97,6 +102,7 @@
       "where": "University of Coimbra",
       "start": "September 2013",
       "end": "June 2015",
+      "include": true,
       "description": [
         "Master's degree in Geoscience specializing in the area of expertise of geological resources.",
         "Dissertation for obtaining master's degree: Magnetic Fabrics of the Coentral Plutonite and Boque-Serpins Formation (Beiras Group)."
@@ -109,6 +115,7 @@
       "where": "University of Coimbra",
       "start": "September 2010",
       "end": "June 2013",
+      "include": false,
       "description": ["Bachelor's degree in Geology."]
     }
   ],
@@ -126,16 +133,17 @@
     { "id": 11, "name": "Gitlab|Github", "level": 3 },
     { "id": 12, "name": "HTML", "level": 2 },
     { "id": 13, "name": "Javascript", "level": 1 },
-    { "id": 14, "name": "Machine Learning", "level": 5 },
-    { "id": 15, "name": "Pandas", "level": 5 },
-    { "id": 16, "name": "Powershell", "level": 2 },
-    { "id": 17, "name": "Power BI", "level": 4 },
-    { "id": 18, "name": "Power Query", "level": 4 },
-    { "id": 19, "name": "Python", "level": 5 },
-    { "id": 20, "name": "R", "level": 3 },
-    { "id": 21, "name": "Scikit-Learn", "level": 4 },
-    { "id": 22, "name": "Shell", "level": 2 },
-    { "id": 23, "name": "Spark", "level": 4 },
-    { "id": 24, "name": "SQL", "level": 4 }
+    { "id": 14, "name": "Looker", "level": 1 },
+    { "id": 15, "name": "Machine Learning", "level": 5 },
+    { "id": 16, "name": "Pandas", "level": 5 },
+    { "id": 17, "name": "Powershell", "level": 2 },
+    { "id": 18, "name": "Power BI", "level": 4 },
+    { "id": 19, "name": "Power Query", "level": 4 },
+    { "id": 20, "name": "Python", "level": 5 },
+    { "id": 21, "name": "R", "level": 3 },
+    { "id": 22, "name": "Scikit-Learn", "level": 4 },
+    { "id": 23, "name": "Shell", "level": 2 },
+    { "id": 24, "name": "Spark", "level": 4 },
+    { "id": 25, "name": "SQL", "level": 4 }
   ]
 }
