@@ -2,18 +2,18 @@
 .DESCRIPTION
 	This script is used to setup development environment using containers
 	Currently only works with docker
- 
+
 .PARAMETER What
 	what step to run in the script, can be one of "build", "create", "run", "rm"
-	
+
 .NOTES
 	Version:        1.0
 	Author:         Marco Ramos
 	Creation Date:  2024-05-09
-  
+
 .EXAMPLE
 	how to run this script
-  
+
 	.\env\setup.ps1 build
 #>
 
@@ -37,7 +37,7 @@ if($What -eq "build") {
 	# build container image
 
 	Write-Output "building image"
-	
+
 	docker build `
 		--rm `
 		--build-arg node_version="${NODE_VERSION}" `
@@ -47,7 +47,7 @@ if($What -eq "build") {
 }
 elseif ($What -eq "create") {
 	# create container
-	
+
 	Write-Output "creating container"
 
 	docker create `
