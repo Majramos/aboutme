@@ -5,7 +5,7 @@ readonly WORKSPACE="${PWD}"
 readonly PROJECT_NAME="${PWD##*/}"
 readonly PORT=1111
 readonly NODE_VERSION=19
-readonly IMAGE="node_venv:node19"
+readonly IMAGE="localhost/node_venv:node19"
 readonly CONTAINERID_PATH="${SCRIPT_PATH}/containerid"
 
 
@@ -14,22 +14,22 @@ if [[ "$1" == "build" ]]; then
 
 	echo -e "building image\n"
 
-	docker build \
+	podman build \
 		--rm \
 		--build-arg node_version="${NODE_VERSION}" \
 		-f $SCRIPT_PATH/Dockerfile\
 		-t "node_venv:node${NODE_VERSION}" \
 		.
-	
+
 elif [[ "$1" == "create" ]]; then
 	# create a container
 
-	docker create \
+	podman create \
 		-it \
 		--cidfile=$SCRIPT_PATH/containerid \
 		--name=$PROJECT_NAME \
 		--restart=no \
-		-v "${WORKSPACE}":/workspace \
+		-v "${WORKSPACE}":/workspace:Z \
 		-p $PORT:8888 \
 		$IMAGE
 
@@ -44,9 +44,9 @@ elif [[ "$1" == "run" ]]; then
 	echo "starting container"
 
 	# bash into a running container
-	docker start $PROJECT_NAME
+	podman start $PROJECT_NAME
 
-	docker attach $PROJECT_NAME
+	podman attach $PROJECT_NAME
 
 
 elif [[ "$1" == "rm" ]]; then
@@ -54,24 +54,12 @@ elif [[ "$1" == "rm" ]]; then
 
 	readonly containerid=$(cat $CONTAINERID_PATH)
 
-	echo "Removing container: $(docker inspect $containerid --format "{{.Name}}")"
+	echo "Removing container: $(podman inspect $containerid --format "{{.Name}}")"
 
-	docker rm $containerid
+	podman rm $containerid
 
 	rm -f $CONTAINERID_PATH
 
 else
 	echo "Parmeters should be one of [build, create, run, rm]"
 fi
-
-
-
-
-	
-	
-
-
-
-
-
-
